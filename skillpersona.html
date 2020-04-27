@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+.spell{
+display: inline-block;
+width: 2cm;
+height: 2cm;
+background: #000;
+border:double 3px firebrick;
+position:relative;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.spell:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  height: 4cm;
+  border-radius: 2cm 0 0 2cm;
+  background: linear-gradient(
+    hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.6) );
+}
+
+.spell_inner{
+display: inline-block;
+width: 1.8cm;
+height: 1.8cm;
+background: silver;
+position:absolute;
+top: 0.1cm;
+left: 0.1cm;
+}
+.fireball{ background: url('fireball.jpg'); background-size: 1.8cm 1.8cm; } 
+</style>
+</head>
+<body>
+<div class="spell">
+<div class="spell_inner fireball"></div>
+</div>
+<hr>
+<div class="skill">
+</body>
+</html>
