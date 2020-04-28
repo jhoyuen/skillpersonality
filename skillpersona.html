@@ -4,10 +4,10 @@
 <style type="text/css">
 .spell{
 display: inline-block;
-width: 2cm;
-height: 2cm;
+width: 1cm;
+height: 1cm;
 background: #000;
-border:double 3px firebrick;
+border:outset 2px;
 position:relative;
 cursor: pointer;
 border-radius: 5px;
@@ -17,30 +17,32 @@ border-radius: 5px;
   content: '';
   display: block;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0px;
-  height: 4cm;
-  border-radius: 2cm 0 0 2cm;
+  left: 0.01cm;
+  right: 0.01cm;
+  top: 0.01cm;
+  height: 0.7cm;
+  border-radius: 0.1cm 0.1cm 0.5cm 0.5cm;
   background: linear-gradient(
-    hsla(0, 0%, 100%, 0.2), hsla(0, 0%, 100%, 0.6) );
+    hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.1) );
 }
 
-.spell_inner{
+.intelligence{ border-color: royalblue; }
+
+.spellart{
 display: inline-block;
-width: 1.8cm;
-height: 1.8cm;
+width: 0.8cm;
+height: 0.8cm;
 background: silver;
 position:absolute;
-top: 0.1cm;
-left: 0.1cm;
+top: 0.07cm;
+left: 0.07cm;
 }
-.fireball{ background: url('fireball.jpg'); background-size: 1.8cm 1.8cm; } 
+.fireball{ background: url('rpg.png') 0 -128px; width:32px; height: 32px; } 
 </style>
 </head>
 <body>
-<div class="spell">
-<div class="spell_inner fireball"></div>
+<div class="intelligence spell">
+<div class="fireball spellart"></div>
 </div>
 <hr>
 <div class="skill">
