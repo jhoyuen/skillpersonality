@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+body{ text-align: center; }
+.spell{
+display: inline-block;
+width: 2cm;
+height: 2cm;
+background: #000;
+border:groove 2px;
+position:relative;
+cursor: pointer;
+border-radius: 5px;
+}
+
+.spell:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0.01cm;
+  right: 0.01cm;
+  top: 0.01cm;
+  height: 1cm;
+  border-radius: 0.1cm 0.1cm 0.7cm 0.7cm;
+  background: linear-gradient(
+    hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0.1) );
+}
+
+.intelligence{ border-color: royalblue; }
+.wisdom{ border-color: antiquewhite; }
+.charisma{ border-color: goldenrod; }
+.strength{ border-color: crimson; }
+.dexterity{ border-color: limegreen; }
+
+.spellart{
+display: inline-block;
+width: 2cm;
+height: 2cm;
+position:absolute;
+top: 0cm;
+left: 0cm;
+}
+.fireball{ background: url('images/fireball.png');}
+.meteor{ background: url('images/meteor.png');}
+.charm{ background: url('images/charm.png');} 
+.heal{ background: url('images/heal.png');} 
+</style>
+</head>
+<body>
+<div class="intelligence spell"><div class="fireball spellart"></div></div>
+<div class="intelligence spell"><div class="meteor spellart"></div></div>
+<hr>
+<div class="wisdom spell"><div class="heal spellart"></div></div>
+<hr>
+<div class="charisma spell"><div class="charm spellart"></div></div>
+<hr>
+<div class="strength spell"><div class="dash spellart"></div></div>
+<hr>
+<div class="dexterity spell"><div class="projectile spellart"></div></div>
+</body>
+</html>
