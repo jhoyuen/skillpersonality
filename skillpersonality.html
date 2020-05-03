@@ -2,7 +2,7 @@
 <html>
 <head>
 <style type="text/css">
-body{ text-align: center; background: #000; }
+body{ background: #000; }
 hr{ border: dotted 1px #dedede;}
 
 table {
@@ -22,8 +22,91 @@ table td.skill {
 }
 
 .col-1, .col-2, .col-3{
+	margin-top: 30px; 
+	vertical-align: top;
+	font-family: Georgia, Serif;
 	display: inline-block;
-	width: 33.33%
+	width: 320px;
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+  .col-1, .col-2, .col-3{
+	width: 320px;
+}
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+  .col-1, .col-2, .col-3{
+	width: 640px;
+}
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+  .col-1, .col-2, .col-3{
+	width: 640px;
+}
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+  .col-1, .col-2, .col-3{
+	width: 320px;
+}
+}
+
+/* #### iPhone 5 Portrait or Landscape #### */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+  .col-1, .col-2, .col-3{
+	width: 320px;
+}
+}
+
+/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+  .col-1, .col-2, .col-3{
+	width: 375px;
+}
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
+  .col-1, .col-2, .col-3{
+	width: 768px;
+}
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px){
+  .col-1, .col-2, .col-3{
+	width: 33%;
+}
+}
+
+.col-3{	
+	text-align: left;
+	color: #dedede;
+}
+.col-3 .title, .col-3 .description, .col-3 .reallife {
+	display: block;
+    width: 100%;
+	margin-bottom: 10px;
+}
+.col-3 .title{ 
+    font-size: 18px;
+    font-weight: 600;
+	
+}
+.col-3 .description{
+	font-size: 14px;
+    font-weight: 200;
+}
+.col-3 .reallife{
+	font-style: italic;
+	font-size: 14px;
+    font-weight: 200;
 }
 
 .spell{
@@ -213,7 +296,22 @@ function drop(ev) {
 	</table>
 </div>
 <div class="col-3">
-
+	<div class="spell-details">
+		<div class="title">
+			
+		</div>
+		<div class="description">
+		</div>
+		<div class="reallife">
+		</div>
+	</div>
 </div>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/skillpersonality.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	init();
+});
+</script>
 </body>
 </html>
