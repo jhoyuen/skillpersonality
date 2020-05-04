@@ -2,7 +2,7 @@
 <html>
 <head>
 <style type="text/css">
-body{ background: #000; }
+body{ background: #000; text-align:center; }
 hr{ border: dotted 1px #dedede;}
 
 table {
@@ -21,89 +21,62 @@ table td.skill {
 	height: 2cm;
 }
 
-.col-1, .col-2, .col-3{
-	margin-top: 30px; 
+.menu{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #dedede;
+	border-bottom: double 3px silver;
+	z-index:100;
+	text-align:center;
+}
+.content{
+	width: 100%;
+	margin-top: 80px; 
+	background: #000;
+	text-align:center;
+	margin-bottom: 2.2cm;
+}
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 2cm;
+	background: #dedede;
+	border-bottom: double 3px silver;
+	z-index:100;
+	text-align:center;
+	padding: 10px;
+}
+
+.row-1, .row-2, .row-3{
 	vertical-align: top;
+	text-align: center;
 	font-family: Georgia, Serif;
-	display: inline-block;
-	width: 320px;
+	display: block;
 }
 
-/* #### Mobile Phones Portrait #### */
-@media screen and (max-device-width: 480px) and (orientation: portrait){
-  .col-1, .col-2, .col-3{
-	width: 320px;
-}
-}
-
-/* #### Mobile Phones Landscape #### */
-@media screen and (max-device-width: 640px) and (orientation: landscape){
-  .col-1, .col-2, .col-3{
-	width: 640px;
-}
-}
-
-/* #### Mobile Phones Portrait or Landscape #### */
-@media screen and (max-device-width: 640px){
-  .col-1, .col-2, .col-3{
-	width: 640px;
-}
-}
-
-/* #### iPhone 4+ Portrait or Landscape #### */
-@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  .col-1, .col-2, .col-3{
-	width: 320px;
-}
-}
-
-/* #### iPhone 5 Portrait or Landscape #### */
-@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
-  .col-1, .col-2, .col-3{
-	width: 320px;
-}
-}
-
-/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-  .col-1, .col-2, .col-3{
-	width: 375px;
-}
-}
-
-/* #### Tablets Portrait or Landscape #### */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px){
-  .col-1, .col-2, .col-3{
-	width: 768px;
-}
-}
-
-/* #### Desktops #### */
-@media screen and (min-width: 1024px){
-  .col-1, .col-2, .col-3{
-	width: 33%;
-}
-}
-
-.col-3{	
+.row-3{	
 	text-align: left;
 	color: #dedede;
 }
-.col-3 .title, .col-3 .description, .col-3 .reallife {
+.row-3 .title, .row-3 .description, .row-3 .reallife {
 	display: block;
     width: 100%;
 	margin-bottom: 10px;
 }
-.col-3 .title{ 
+.row-3 .title{ 
     font-size: 18px;
     font-weight: 600;
 	
 }
-.col-3 .description{
+.row-3 .description{
 	font-size: 14px;
     font-weight: 200;
 }
-.col-3 .reallife{
+.row-3 .reallife{
 	font-style: italic;
 	font-size: 14px;
     font-weight: 200;
@@ -212,7 +185,68 @@ function drop(ev) {
 </script>
 </head>
 <body>
-<div class="col-1">
+<div class="menu">
+	<a href="#" id="about">About</a>
+	<a href="#" id="skillcheck">Skill Check</a>
+	<a href="#" id="makeadie">Make a 6-sided Die</a>
+</div>
+<div class="content">
+<div class="row-1">
+	
+</div>
+<div class="row-2">
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</div>
+<div class="row-3">
+	<div class="spell-details">
+		<div class="title">
+			
+		</div>
+		<div class="description">
+		</div>
+		<div class="reallife">
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="footer">
 	<div id="fireball" class="intelligence spell" draggable="true" ondragstart="drag(event)"><div class="fireball spellart"></div></div>
 	<div id="meteor" class="intelligence spell" draggable="true" ondragstart="drag(event)"><div class="meteor spellart"></div></div>
 	<div id="chainlightning" class="intelligence spell" draggable="true" ondragstart="drag(event)"><div class="chainlightning spellart"></div></div>
@@ -255,56 +289,6 @@ function drop(ev) {
 	<div id="flashfist" class="dexterity spell" draggable="true" ondragstart="drag(event)"><div class="flashfist spellart"></div></div>
 	<div id="flurryofdaggers" class="dexterity spell" draggable="true" ondragstart="drag(event)"><div class="flurryofdaggers spellart"></div></div>
 	<div id="backstab" class="dexterity spell" draggable="true" ondragstart="drag(event)"><div class="backstab spellart"></div></div>
-</div>
-<div class="col-2">
-	<table>
-		<tr>
-			<td></td>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-</div>
-<div class="col-3">
-	<div class="spell-details">
-		<div class="title">
-			
-		</div>
-		<div class="description">
-		</div>
-		<div class="reallife">
-		</div>
-	</div>
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/skillpersonality.js"></script>
