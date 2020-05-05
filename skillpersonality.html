@@ -37,17 +37,32 @@ table td.skill {
 	font-family: "Garamond";
 	font-size: 2cm;
 	text-align: center;
-	
+	margin-bottom:20px;
 }
 
 .menu a{
 	text-decoration: none;
-	padding: 10px;
+    background-image: linear-gradient( /* chrome */ hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2) );
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #343434;
+    padding: 13px 20px;
+    text-shadow: 0 0 15px hsla(0, 0%, 100%, 1), /* bloom */ 0 2px 4px hsla(0, 0%, 0%, 0.7);
+    border: solid 1px silver;
+    border-radius: 30px;
+    margin: 5px;
+    inset 0 5px 20px hsla(0, 0%, 100%, 0.4),: ;
+    0px 0px 0px hsla(0, 0%, 0%, 0.15),: ;
+    5px 18px 10px hsla(0, 0%, 0%, 0.2): ;
+    */: ;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .content{
 	width: 100%;
-	margin-top: 180px; 
+	margin-top: 160px; 
 	background: #000;
 	text-align:center;
 	margin-bottom: 2.2cm;
@@ -73,7 +88,7 @@ table td.skill {
 	width: 56cm;
 }
 
-.row-1, .row-2, .row-3{
+.spell-list, .personality, .spell-item, .about{
 	vertical-align: top;
 	text-align: center;
 	font-family: Georgia, Serif;
@@ -81,31 +96,35 @@ table td.skill {
 	min-height: 800px;
 }
 
-.row-3{	
+.about{
+	color: #fff;
+}
+
+.spell-item{	
 	text-align: left;
 	color: #dedede;
 }
 
-.row-3 .spell-details{
+.spell-item .spell-details{
 	height: 500px;
 	margin: 10px;
 	padding: 10px;
 }
-.row-3 .title, .row-3 .description, .row-3 .reallife {
+.spell-item .title, .row-3 .description, .row-3 .reallife {
 	display: block;
     width: 100%;
 	margin-bottom: 10px;
 }
-.row-3 .title{ 
+.spell-item .title{ 
     font-size: 18px;
     font-weight: 600;
 	
 }
-.row-3 .description{
+.spell-item .description{
 	font-size: 14px;
     font-weight: 200;
 }
-.row-3 .reallife{
+.spell-item .reallife{
 	font-style: italic;
 	font-size: 14px;
     font-weight: 200;
@@ -224,11 +243,12 @@ function drop(ev) {
 <div class="menu">
 	<div class="page-title">Skill Personality</div>
 	<a href="#" id="about">About</a>
-	<a href="#" id="skillcheck">Skill Check</a>
-	<a href="#" id="makeadie">Make a 6-sided Die</a>
+	<a href="#" id="spell-list">Spells</a>
+	<a href="#" id="personality">Personality</a>
+	<a href="#" id="makea6die">Make a 6-sided Die</a>
 </div>
 <div class="content">
-<div class="row-1">
+<div class="spell-list">
 <div id="fireball" class="intelligence spell" draggable="true" ondragstart="drag(event)"><div class="fireball spellart"></div></div>
 	<div id="meteor" class="intelligence spell" draggable="true" ondragstart="drag(event)">
 	  <div class="meteor spellart"></div>
@@ -354,7 +374,10 @@ function drop(ev) {
 	  <div class="backstab spellart"></div>
 	</div>
 </div>
-<div class="row-2">
+<div class="about">
+<h3>About</h3>
+</div>
+<div class="personality">
 	<table>
 		<tr>
 			<td></td>
@@ -393,7 +416,7 @@ function drop(ev) {
 		</tr>
 	</table>
 </div>
-<div class="row-3">
+<div class="spell-item">
 	<div class="spell-details">
 		<div class="title">
 			
