@@ -9,14 +9,20 @@ var spells = {
 	thunderbolt: { title: "Thunder Bolt", description: "", reallife: "" },
 };
 
-function init(){
+function init(){	
 	$('.spell').off().on('click', function(){
-		// console.log($(this).attr('id'));
-		// console.log(spells[$(this).attr('id')]);
-		// console.log(spells[$(this).attr('id')].title);
-		// console.log(spells[$(this).attr('id')].description);
+		$('html, body').animate(
+        {scrollTop: $('.spell-item').offset().top - 170}, 
+        500);
+		
 		$('.title').html(spells[$(this).attr('id')].title);
 		$('.description').html(spells[$(this).attr('id')].description);
 		$('.reallife').html(spells[$(this).attr('id')].reallife);
+	});
+	
+	$('.menu a').off().on('click', function(){
+		$('html, body').animate(
+			{scrollTop: $('.' + $(this).attr('id')).offset().top - 170}, 
+        500);
 	});
 }
