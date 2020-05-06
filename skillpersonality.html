@@ -110,10 +110,18 @@ table td.skill {
 	margin: 10px;
 	padding: 10px;
 }
-.spell-item .title, .row-3 .description, .row-3 .reallife {
+.spell-item .spellimage, .title, .row-3 .description, .row-3 .reallife {
 	display: block;
     width: 100%;
 	margin-bottom: 10px;
+}
+.spell-item .spellimage{
+	display: block;
+	width:76px;
+	height: 76px;
+    font-size: 18px;
+    font-weight: 600;
+	
 }
 .spell-item .title{ 
     font-size: 18px;
@@ -123,6 +131,7 @@ table td.skill {
 .spell-item .description{
 	font-size: 14px;
     font-weight: 200;
+	margin-bottom: 5px;
 }
 .spell-item .reallife{
 	font-style: italic;
@@ -418,8 +427,9 @@ function drop(ev) {
 </div>
 <div class="spell-item">
 	<div class="spell-details">
+		<div class="spellimage">
+		</div>
 		<div class="title">
-			
 		</div>
 		<div class="description">
 		</div>
