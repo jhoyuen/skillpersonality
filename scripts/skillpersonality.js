@@ -11,7 +11,24 @@ var spells = {
 	thunderwave: { title: "Thunderwave", description: "A blaze of thunder booming in a line", reallife: "\"Loudly fix all problems that lie in front of you\"" },
 	firewave: { title: "Firewave", description: "A blaze of fire burning in a line", reallife: "\"Passionately fix all problems that lie in front of you\"" },
 	teleport: { title: "Teleport", description: "Magically disapear and appear at a different point of space and time", reallife: "\"Seem to be anywhere, everywhere anytime...\"" },
-	animate: { title: "Animate", description: "Bring a ", reallife: "\"Seem to be anywhere, everywhere anytime...\"" },
+	reflect: { title: "Reflect", description: "repel an attack", reallife: "\"under attack, produce a counter argument, thought or idea\"" },
+	wildmagic: { title: "Wild Magic", description: "A random frog, fire sparks, meteor showers, sizzle your hair, you name it!", reallife: "\"use your wits and energy to achieve random feats of highs and lows...\"" },
+	timestop: { title: "Time Stop", description: "Stop the time around you for a limited duration", reallife: "\"Nobody stops time. Unless you manage to do things faster and better than anyone else around you and make little to no mistakes... \"" },	
+	heal: { title: "Heal", description: "Heal person", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you are there to turn it around by words and actions\"" },		
+	regen: { title: "Regenerate", description: "Regenerate life", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you are there everyday to help\"" },			
+	blessing: { title: "Blessing", description: "Bless person", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you pray so they get better or stronger\"" },				
+	holyshield: { title: "Holy Shield", description: "Bestow a divine shield", reallife: "\"Pray for someone's protection\"" },					
+	summonpet: { title: "Summon Pet", description: "Call your most trusted animal friend companion", reallife: "\"Your pet is your loyal friend and gives you strength\"" },					
+	callofthewild: { title: "Call of the Wild", description: "Call all friends of the wild to your aid", reallife: "\"true nature lover, work closely to the preservation of wildlife and nature\"" },					
+	moonbeam: { title: "Moonbeam", description: "Shoot a laser beam from the moon", reallife: "\"A precise fix that seem to come out of nowhere\"" },						
+	sunblast: { title: "Sunblast", description: "Shoot a burst of energy from the sun", reallife: "\"A powerful fix that seem to come out of nowhere\"" },						
+	charm: { title: "Charm", description: "Charm a person to act for you", reallife: "\"Coerce someone into taking action by the force of your personality\"" },						
+	inspire: { title: "Inspire", description: "Boost a person's innate abilities", reallife: "\"By words, music or action, help others find their better selves and hence perform better in their endeavours\"" },						
+	animate: { title: "Animate", description: "Bring an inanimate object to life", reallife: "\"Although not literally, animation is in everyday life as moving pictures, bubbling sounds, robots...\"" },	
+	mindcontrol: { title: "Mind Control", description: "Take over a person's mind to make them act for you", reallife: "\"By coercion, intimidation, deception or manipulation among others, convince other people to think little of themselves and make them work for you\"" },						
+	summondemon: { title: "Summon Demon", description: "Summon a random demon", reallife: "\"Any means is good to achieve your goals, no matter how bad the means\"" },						
+	
+		
 };
 
 function init(){	
