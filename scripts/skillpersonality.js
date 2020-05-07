@@ -27,8 +27,15 @@ var spells = {
 	animate: { title: "Animate", description: "Bring an inanimate object to life", reallife: "\"Although not literally, animation is in everyday life as moving pictures, bubbling sounds, robots...\"" },	
 	mindcontrol: { title: "Mind Control", description: "Take over a person's mind to make them act for you", reallife: "\"By coercion, intimidation, deception or manipulation among others, convince other people to think little of themselves and make them work for you\"" },						
 	summondemon: { title: "Summon Demon", description: "Summon a random demon", reallife: "\"Any means is good to achieve your goals, no matter how bad the means\"" },						
-	
-		
+	punch: { title: "Punch", description: "A direct punch", reallife: "\"Address a problem head on\"" },						
+	cleave: { title: "Cleave", description: "Slash down like a hot knife through butter", reallife: "\"Address a problem head on in one go, it was easy\"" },		
+	smash: { title: "Smash", description: "Smash down", reallife: "\"Address a problem head on in one go in an attempt to break through it\"" },
+	whirlwind: { title: "Whirlwind", description: "A spinning attack with the sword", reallife: "\"Address several problems around you. hit and miss...\"" },	
+	swipe: { title: "Swipe", description: "A slicing movement laterally cutting through the air", reallife: "\"try to get a major swipe at a problem\"" },
+	shieldslam: { title: "Shield Slam", description: "Your shield serves you as a weapon to stun your enemy", reallife: "\"Turn what you would use to defend yourself onto a problem solving idea or action\"" },
+	archery: { title: "Archery", description: "You are able to effectively use bow and arrows", reallife: "\"You have a direct approach and all about finishing targets\"" },
+	rainarrows: { title: "Rain Arrows", description: "an array of arrows fall from the sky", reallife: "\"Try to fix as many problems as you can, hoping that as many of them are fixed\"" },
+	firearrows: { title: "Fire Arrows", description: "an array of arrows fall from the sky", reallife: "\"Try to fix as many problems as you can, hoping that as many of them are fixed\"" },	
 };
 
 function init(){	
