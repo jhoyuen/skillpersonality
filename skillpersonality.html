@@ -217,6 +217,7 @@ left: 0cm;
 .holyshield{ background: url('images/holyshield.png');}
 .charm{ background: url('images/charm.png');} 
 .inspire{ background: url('images/inspire.png');}
+.favoredsoul{ background: url('images/favoredsoul.png');} 
 .animate{ background: url('images/animate.png');}
 .mindcontrol{ background: url('images/mindcontrol.png');}
 .summondemon{ background: url('images/summondemon.png');} 
@@ -225,11 +226,14 @@ left: 0cm;
 .smash{ background: url('images/smash.png');} 
 .whirlwind{ background: url('images/whirlwind.png');} 
 .swipe{ background: url('images/swipe.png');} 
+.lightningblade{ background: url('images/lightningblade.png');} 
 .shieldslam{ background: url('images/shieldslam.png');} 
 .archery{ background: url('images/archery.png');} 
 .rainarrows{ background: url('images/rainarrows.png');} 
-.firearrows{ background: url('images/firearrows.png');} 
+.firearrows{ background: url('images/firearrows.png');}
+.snipe{ background: url('images/snipe.png');}  
 .trap{ background: url('images/trap.png');} 
+.track{ background: url('images/track.png');} 
 .bomb{ background: url('images/bomb.png');} 
 .flashfist{ background: url('images/flashfist.png');} 
 .flurryofdaggers{ background: url('images/flurryofdaggers.png');} 
@@ -335,6 +339,9 @@ function drop(ev) {
 	<div id="inspire" class="charisma spell" draggable="true" ondragstart="drag(event)">
 	  <div class="inspire spellart"></div>
 	</div>
+	<div id="favoredsoul" class="charisma spell" draggable="true" ondragstart="drag(event)">
+	  <div class="favoredsoul spellart"></div>
+	</div>
 	<div id="animate" class="charisma spell" draggable="true" ondragstart="drag(event)">
 	  <div class="animate spellart"></div>
 	</div>
@@ -359,6 +366,9 @@ function drop(ev) {
 	<div id="swipe" class="strength spell" draggable="true" ondragstart="drag(event)">
 	  <div class="swipe spellart"></div>
 	</div>
+	<div id="lightningblade" class="strength spell" draggable="true" ondragstart="drag(event)">
+	  <div class="lightningblade spellart"></div>
+	</div>
 	<div id="shieldslam" class="strength spell" draggable="true" ondragstart="drag(event)">
 	  <div class="shieldslam spellart"></div>
 	</div>
@@ -371,8 +381,14 @@ function drop(ev) {
 	<div id="firearrows" class="dexterity spell" draggable="true" ondragstart="drag(event)">
 	  <div class="firearrows spellart"></div>
 	</div>
+	<div id="snipe" class="dexterity spell" draggable="true" ondragstart="drag(event)">
+	  <div class="snipe spellart"></div>
+	</div>
 	<div id="trap" class="dexterity spell" draggable="true" ondragstart="drag(event)">
 	  <div class="trap spellart"></div>
+	</div>
+	<div id="track" class="dexterity spell" draggable="true" ondragstart="drag(event)">
+	  <div class="track spellart"></div>
 	</div>
 	<div id="bomb" class="dexterity spell" draggable="true" ondragstart="drag(event)">
 	  <div class="bomb spellart"></div>
