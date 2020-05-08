@@ -240,21 +240,6 @@ left: 0cm;
 .backstab{ background: url('images/backstab.png');} 
 
 </style>
-<script type="text/javascript">
-function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-</script>
 </head>
 <body>
 <div class="menu">
@@ -491,6 +476,7 @@ function drop(ev) {
 </div>
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/class.js"></script>
 <script type="text/javascript" src="scripts/skillpersonality.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
