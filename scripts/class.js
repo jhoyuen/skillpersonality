@@ -1,26 +1,26 @@
 var intelligence = { 
-	main: [ 'wizard', 'battlemage', 'witch', 'necromancer', 'warlock', 'sorcerer' ],
-	sub: [ 'bard', 'ranger', 'druid', 'priest' ]
+	main: [ 'wizard', 'battlemage', 'witch', 'necromancer' ],
+	sub: [ 'bard', 'druid' ]
 };
 
 var wisdom = {
 	main: [ 'priest', 'druid', 'ranger', 'monk' ],
-	sub: [ 'paladin', 'wizard' ]
+	sub: [ ]
 };
 
 var charisma = {
 	main: [ 'paladin', 'bard', 'sorcerer', 'warlock' ],
-	sub: [ 'necromancer', 'witch' ]
+	sub: [ 'necromancer', 'witch', 'priest' ]
 };
 
 var strength = { 
-	main: [ 'barbarian', 'fighter', 'paladin', 'battlemage' ],
-	sub: [ 'rogue', 'monk' ]
+	main: [ 'barbarian', 'fighter', 'battlemage' ],
+	sub: [ 'paladin' ]
 };
 
 var dexterity = {
-	main: [ 'monk', 'rogue' ],
-	sub: [ 'bard', 'ranger', 'fighter' ]	
+	main: [ 'monk', 'rogue', 'ranger', 'fighter' ],
+	sub: [ 'bard' ]	
 };
 
 var wizard = 0;
@@ -86,6 +86,6 @@ function GetClassPercentage(className){
     // console.log(className + ': ' + ((window[className] / selectedSkillsCount) * 100) + '%');
 	if(window[className] != 0 && selectedSkillsCount != 0)
 	{
-		$('.whatismypersonality').append('<p>' + className +': ' + ((window[className] / selectedSkillsCount) * 100) + '%' + '</p>');
+		$('.whatismypersonality').append('<p data-classpercentage="' + parseFloat((window[className] / selectedSkillsCount) * 100).toFixed(2) + '">' + className +': ' + ((window[className] / selectedSkillsCount) * 100).toFixed(2) + '%' + '</p>');
 	}
 };

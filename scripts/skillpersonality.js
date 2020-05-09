@@ -86,6 +86,12 @@ function init(){
 		GetClassPercentage('warlock');
 		GetClassPercentage('witch');
 		GetClassPercentage('necromancer');
+		
+		$('.whatismypersonality p').sort(sort_p).appendTo('.whatismypersonality');
+		
+		function sort_p(a, b){
+			return ($(b).data('classpercentage')) - ($(a).data('classpercentage'));    
+		}
 	});
 }
 
