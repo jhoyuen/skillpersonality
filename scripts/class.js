@@ -26,7 +26,7 @@ var dexterity = {
 var wizard = 0;
 var bard = 0;
 
-function GetClassPercentage(className){
+function GetClassPercentage(className){	
   var selectedSkillsCount = $('.skill').find('.spell').length;
   var intelligenceCount = $('.skill').find('.intelligence').length;
   var wisdomCount = $('.skill').find('.wisdom').length;
@@ -34,6 +34,7 @@ function GetClassPercentage(className){
   var strengthCount = $('.skill').find('.strength').length;
   var dexterityCount = $('.skill').find('.dexterity').length;
   
+  window[className] = 0;
   
   if (intelligence['main'].includes(className))
   {
@@ -81,9 +82,10 @@ function GetClassPercentage(className){
     // console.log('charisma oount: ' + charismaCount);
     // console.log('strength oount: ' + strengthCount);
     // console.log('dexterity oount: ' + dexterityCount);
-  
-    console.log('Selected Skill Count:' + selectedSkillsCount);
-    console.log('Wizard: ' + ((wizard / selectedSkillsCount) * 100) + '%');
-     console.log('Bard: ' + ((bard/ selectedSkillsCount) * 100) + '%');
+    // console.log('Selected Skill Count:' + selectedSkillsCount);
+    // console.log(className + ': ' + ((window[className] / selectedSkillsCount) * 100) + '%');
+	if(window[className] != 0 && selectedSkillsCount != 0)
+	{
+		$('.whatismypersonality').append('<p>' + className +': ' + ((window[className] / selectedSkillsCount) * 100) + '%' + '</p>');
+	}
 };
-

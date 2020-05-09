@@ -65,6 +65,28 @@ function init(){
 			{scrollTop: $('.' + $(this).attr('id')).offset().top - 170}, 
         500);
 	});
+	$('a#whatismypersonality').off().on('click', function(){
+		$('html, body').animate(
+			{scrollTop: $('.' + $(this).attr('id')).offset().top - 170}, 
+        500);
+		
+		$('.whatismypersonality').html('');
+		GetClassPercentage('wizard');
+		GetClassPercentage('bard');
+		GetClassPercentage('sorcerer');
+		GetClassPercentage('ranger');
+		GetClassPercentage('fighter');
+		GetClassPercentage('barbarian');
+		GetClassPercentage('paladin');
+		GetClassPercentage('battlemage');
+		GetClassPercentage('priest');
+		GetClassPercentage('monk');
+		GetClassPercentage('rogue');
+		GetClassPercentage('druid');
+		GetClassPercentage('warlock');
+		GetClassPercentage('witch');
+		GetClassPercentage('necromancer');
+	});
 }
 
 function allowDrop(ev) {
@@ -79,8 +101,4 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-
-  
-GetClassPercentage('wizard');
-  GetClassPercentage('bard');
 }
