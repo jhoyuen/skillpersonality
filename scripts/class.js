@@ -5,7 +5,7 @@ var intelligence = {
 
 var wisdom = {
 	main: [ 'priest', 'druid', 'ranger', 'monk' ],
-	sub: [ ]
+	sub: [ 'warlock' ]
 };
 
 var charisma = {
