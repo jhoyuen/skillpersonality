@@ -79,64 +79,8 @@ function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
-  
-  var selectedSkillsCount = $('.skill').find('.spell').length;
-  var intelligenceCount = $('.skill').find('.intelligence').length;
-  var wisdomCount = $('.skill').find('.wisdom').length;
-  var charismaCount = $('.skill').find('.charisma').length;
-  var strengthCount = $('.skill').find('.strength').length;
-  var dexterityCount = $('.skill').find('.dexterity').length;
-  
-  var wizard = 0;
-  if(intelligence['main'].includes('wizard'))
-  {
-	  wizard += intelligenceCount;
-  }
-  if(intelligence['sub'].includes('wizard'))
-  {
-	  wizard += (intelligenceCount / 2);
-  }
-  if(wisdom['main'].includes('wizard'))
-  {
-	  wizard += wisdomCount;
-  }
-  if(wisdom['sub'].includes('wizard'))
-  {
-	  wizard += (wisdomCount / 2);
-  }
-  if(charisma['main'].includes('wizard'))
-  {
-	  wizard += charismaCount;
-  }
-  if(charisma['sub'].includes('wizard'))
-  {
-	  wizard += (charismaCount / 2);
-  }
-  if(strength['main'].includes('wizard'))
-  {
-	  wizard += strengthCount;
-  }
-  if(strength['sub'].includes('wizard'))
-  {
-	  wizard += (strengthCount / 2);
-  }
-  if(dexterity['main'].includes('wizard'))
-  {
-	  wizard += dexterityCount;
-  }
-  if(dexterity['sub'].includes('wizard'))
-  {
-	  wizard += (dexterityCount / 2);
-  }
-  
-  
-  // console.log('intelligence oount: ' + intelligenceCount);
-  // console.log('wisdom oount: ' + wisdomCount);
-  // console.log('charisma oount: ' + charismaCount);
-  // console.log('strength oount: ' + strengthCount);
-  // console.log('dexterity oount: ' + dexterityCount);
 
-  console.log('Selected Skill Count:' + selectedSkillsCount);
-  console.log('Wizard: ' + ((wizard / selectedSkillsCount) * 100) + '%');
   
+GetClassPercentage('wizard');
+  GetClassPercentage('bard');
 }
