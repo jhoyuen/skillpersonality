@@ -15,7 +15,7 @@ var charisma = {
 
 var strength = { 
 	main: [ 'barbarian', 'fighter', 'battlemage' ],
-	sub: [ 'paladin' ]
+	sub: [ 'paladin', 'monk' ]
 };
 
 var dexterity = {
