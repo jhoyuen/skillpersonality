@@ -1,5 +1,5 @@
 var intelligence = { 
-	main: [ 'wizard', 'battlemage', 'witch', 'necromancer' ],
+	main: [ 'wizard', 'battlemage', 'witch', 'necromancer', 'sorcerer' ],
 	sub: [ 'bard', 'druid' ]
 };
 
