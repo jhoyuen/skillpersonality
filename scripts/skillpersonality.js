@@ -26,6 +26,7 @@ var spells = {
 	inspire: { title: "Inspire", description: "Boost a person's innate abilities", reallife: "\"By words, music or action, help others find their better selves and hence perform better in their endeavours\"" },						
 	favoredsoul: { title: "Favored Soul", description: "Boost own stats by a certain amount", reallife: "\"A star seems to shine upon you and luck is on your side\"" },							
 	animate: { title: "Animate", description: "Bring an inanimate object to life", reallife: "\"Although not literally, animation is in everyday life as moving pictures, bubbling sounds, robots...\"" },	
+	soulmusic: { title: "Soul Music", description: "Boost a group's attributes", reallife: "\"By music, improve people's spirits!\"" },	
 	mindcontrol: { title: "Mind Control", description: "Take over a person's mind to make them act for you", reallife: "\"By coercion, intimidation, deception or manipulation among others, convince other people to think little of themselves and make them work for you\"" },						
 	summondemon: { title: "Summon Demon", description: "Summon a random demon", reallife: "\"Any means is good to achieve your goals, no matter how bad the means\"" },						
 	punch: { title: "Punch", description: "A direct punch", reallife: "\"Address a problem head on\"" },						
@@ -44,7 +45,9 @@ var spells = {
 	bomb: { title: "Bomb", description: "A bomb!", reallife: "\"Solving many issues in one blast!\"" },	
 	flashfist: { title: "Flash Fist", description: "A volley of fist punches", reallife: "\"Trying to fix as many problems as you can, but they are low impact\"" },						
 	flurryofdaggers: { title: "Flurry of Daggers", description: "A swing of daggers", reallife: "\"Trying to fix as many problems as you can, with a high chance to resolve them some of them\"" },						
-	backstab: { title: "Backstab", description: "Backstab", reallife: "\"A blow behind someone's back\"" },							
+	backstab: { title: "Backstab", description: "Sneak attack a target", reallife: "\"A blow behind someone's back\"" },
+	haste: { title: "Haste", description: "Boost own speed", reallife: "\"Work or act faster\"" },							
+	flyingsword: { title: "Flying Sword", description: "Your dexterity allows you to keep your sword flying in the air", reallife: "\"Achieve the art of multitasking \"" },
 };
 
 function init(){
