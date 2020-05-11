@@ -1,26 +1,26 @@
 var intelligence = { 
-	main: [ 'wizard', 'battlemage', 'witch', 'necromancer', 'sorcerer' ],
-	sub: [ 'bard', 'druid' ]
+	main: [ 'wizard', 'battlemage', 'witch', 'necromancer', 'warlock', 'sorcerer' ],
+	sub: [ 'bard', 'ranger', 'druid', 'priest' ]
 };
 
 var wisdom = {
 	main: [ 'priest', 'druid', 'ranger', 'monk' ],
-	sub: [ 'warlock' ]
+	sub: [ 'paladin', 'wizard' ]
 };
 
 var charisma = {
 	main: [ 'paladin', 'bard', 'sorcerer', 'warlock' ],
-	sub: [ 'necromancer', 'witch', 'priest' ]
+	sub: [ 'necromancer', 'witch' ]
 };
 
 var strength = { 
-	main: [ 'barbarian', 'fighter', 'battlemage' ],
-	sub: [ 'paladin' ]
+	main: [ 'barbarian', 'fighter', 'paladin', 'battlemage' ],
+	sub: [ 'rogue', 'monk' ]
 };
 
 var dexterity = {
-	main: [ 'monk', 'rogue', 'ranger', 'fighter' ],
-	sub: [ 'bard' ]	
+	main: [ 'monk', 'rogue' ],
+	sub: [ 'bard', 'ranger', 'fighter' ]	
 };
 
 var wizard = 0;
@@ -36,46 +36,48 @@ function GetClassPercentage(className){
   
   window[className] = 0;
   
-  if (intelligence['main'].includes(className))
-  {
-    window[className] += intelligenceCount;
-  }
-  if (intelligence['sub'].includes(className))
-  {
-    window[className] += (intelligenceCount / 2);
-  }
-  if (wisdom['main'].includes(className))
-  {
-    window[className] += wisdomCount;
-  }
-  if (wisdom['sub'].includes(className))
-  {
-    window[className] += (wisdomCount / 2);
-  }
-  if (charisma['main'].includes(className))
-  {
-    window[className] += charismaCount;
-  }
-  if (charisma['sub'].includes(className))
-  {
-    window[className] += (charismaCount / 2);
-  }
-  if (strength['main'].includes(className))
-  {
-    window[className] += strengthCount;
-  }
-  if (strength['sub'].includes(className))
-  {
-    window[className] += (strengthCount / 2);
-  }
-  if (dexterity['main'].includes(className))
-  {
-    window[className] += dexterityCount;
-  }
-  if (dexterity['sub'].includes(className))
-  {
-    window[className] += (dexterityCount / 2);
-  }
+  // if (intelligence['main'].includes(className))
+  // {
+    // window[className] += intelligenceCount;
+  // }
+  // if (intelligence['sub'].includes(className))
+  // {
+    // window[className] += (intelligenceCount / 2);
+  // }
+  // if (wisdom['main'].includes(className))
+  // {
+    // window[className] += wisdomCount;
+  // }
+  // if (wisdom['sub'].includes(className))
+  // {
+    // window[className] += (wisdomCount / 2);
+  // }
+  // if (charisma['main'].includes(className))
+  // {
+    // window[className] += charismaCount;
+  // }
+  // if (charisma['sub'].includes(className))
+  // {
+    // window[className] += (charismaCount / 2);
+  // }
+  // if (strength['main'].includes(className))
+  // {
+    // window[className] += strengthCount;
+  // }
+  // if (strength['sub'].includes(className))
+  // {
+    // window[className] += (strengthCount / 2);
+  // }
+  // if (dexterity['main'].includes(className))
+  // {
+    // window[className] += dexterityCount;
+  // }
+  // if (dexterity['sub'].includes(className))
+  // {
+    // window[className] += (dexterityCount / 2);
+  // }
+  
+  
   
     // console.log('intelligence oount: ' + intelligenceCount);
     // console.log('wisdom oount: ' + wisdomCount);
@@ -84,8 +86,11 @@ function GetClassPercentage(className){
     // console.log('dexterity oount: ' + dexterityCount);
     // console.log('Selected Skill Count:' + selectedSkillsCount);
     // console.log(className + ': ' + ((window[className] / selectedSkillsCount) * 100) + '%');
+	
+	window[className] = $('.skill').find('.' + className).length;
+	
 	if(window[className] != 0 && selectedSkillsCount != 0)
 	{
-		$('.whatismypersonality').append('<p data-classpercentage="' + parseFloat((window[className] / selectedSkillsCount) * 100).toFixed(2) + '">' + className +': ' + ((window[className] / selectedSkillsCount) * 100).toFixed(2) + '%' + '</p>');
+		$('.whatismypersonality').append('<p data-classpercentage="' + ((window[className] / selectedSkillsCount) * 100) + '">' + className +': ' + ((window[className] / selectedSkillsCount) * 100).toFixed(2) + '%' + '</p>');
 	}
 };
