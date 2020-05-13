@@ -211,8 +211,10 @@ left: 0cm;
 .firewave{ background: url('images/firewave.png');}
 .teleport{ background: url('images/teleport.png');}
 .reflect{ background: url('images/reflect.png');}
+.magicbarrier{ background: url('images/magicbarrier.png');}
 .wildmagic{ background: url('images/wildmagic.png');}
 .timestop{ background: url('images/timestop.png');}
+.missile{ background: url('images/missile.png');}
 .heal{ background: url('images/heal.png');} 
 .regen{ background: url('images/regen.png');} 
 .blessing{ background: url('images/blessing.png');} 
@@ -220,17 +222,24 @@ left: 0cm;
 .holysword{ background: url('images/holysword.png');}
 .mount{ background: url('images/mount.png');}
 .summonpet{ background: url('images/summonpet.png');} 
+.summonbug{ background: url('images/summonbug.png');} 
 .callofthewild{ background: url('images/callofthewild.png');} 
 .moonbeam{ background: url('images/moonbeam.png');} 
 .sunblast{ background: url('images/sunblast.png');} 
 .wildgrowth{ background: url('images/wildgrowth.png');}
 .entangle{ background: url('images/entangle.png');} 
 .shapeshift{ background: url('images/shapeshift.png');} 
+.aurabolt{ background: url('images/aurabolt.png');} 
+.meditate{ background: url('images/meditate.png');} 
+.enlightenment{ background: url('images/enlightenment.png');} 
 .charm{ background: url('images/charm.png');} 
+.lucky{ background: url('images/lucky.png');}
+.sleep{ background: url('images/sleep.png');}
 .inspire{ background: url('images/inspire.png');}
 .favoredsoul{ background: url('images/favoredsoul.png');} 
 .animate{ background: url('images/animate.png');}
 .soulmusic{ background: url('images/soulmusic.png');}
+.metamagic{ background: url('images/metamagic.png');}
 .mindcontrol{ background: url('images/mindcontrol.png');}
 .summondemon{ background: url('images/summondemon.png');} 
 .hex{ background: url('images/hex.png');} 
@@ -241,6 +250,8 @@ left: 0cm;
 .swipe{ background: url('images/swipe.png');} 
 .lightningblade{ background: url('images/lightningblade.png');} 
 .shieldslam{ background: url('images/shieldslam.png');} 
+.roar{ background: url('images/roar.png');} 
+.charge{ background: url('images/charge.png');} 
 .archery{ background: url('images/archery.png');} 
 .rainarrows{ background: url('images/rainarrows.png');} 
 .firearrows{ background: url('images/firearrows.png');}
@@ -252,7 +263,9 @@ left: 0cm;
 .flurryofdaggers{ background: url('images/flurryofdaggers.png');} 
 .backstab{ background: url('images/backstab.png');} 
 .haste{ background: url('images/haste.png');} 
-.flyingsword{ background: url('images/flyingsword.png');} 
+.flyingsword{ background: url('images/flyingsword.png');}
+.poison{ background: url('images/poison.png');}  
+.stealth{ background: url('images/stealth.png');}  
 </style>
 </head>
 <body>
@@ -302,11 +315,17 @@ left: 0cm;
 	<div id="reflect" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="reflect spellart"></div>
 	</div>
+	<div id="magicbarrier" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="magicbarrier spellart"></div>
+	</div>
 	<div id="wildmagic" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="wildmagic spellart"></div>
 	</div>
 	<div id="timestop" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="timestop spellart"></div>
+	</div>
+	<div id="missile" class="intelligence spell artificer" draggable="true" ondragstart="drag(event)">
+	  <div class="missile spellart"></div>
 	</div>
 	<div id="heal" class="wisdom spell priest paladin bard druid" draggable="true" ondragstart="drag(event)">
 	  <div class="heal spellart"></div>
@@ -329,6 +348,9 @@ left: 0cm;
 	<div id="summonpet" class="wisdom spell paladin ranger bard" draggable="true" ondragstart="drag(event)">
 	  <div class="summonpet spellart"></div>
 	</div>
+	<div id="summonbug" class="wisdom spell druid ranger bard sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="summonbug spellart"></div>
+	</div>
 	<div id="callofthewild" class="wisdom spell ranger druid" draggable="true" ondragstart="drag(event)">
 	  <div class="callofthewild spellart"></div>
 	</div>
@@ -347,8 +369,23 @@ left: 0cm;
 	<div id="shapeshift" class="wisdom spell druid" draggable="true" ondragstart="drag(event)">
 	  <div class="shapeshift spellart"></div>
 	</div>
+	<div id="aurabolt" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
+	  <div class="aurabolt spellart"></div>
+	</div>
+	<div id="meditate" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
+	  <div class="meditate spellart"></div>
+	</div>
+	<div id="enlightenment" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
+	  <div class="enlightenment spellart"></div>
+	</div>
 	<div id="charm" class="charisma spell bard sorcerer warlock witch" draggable="true" ondragstart="drag(event)">
 	  <div class="charm spellart"></div>
+	</div>
+	<div id="lucky" class="charisma spell bard" draggable="true" ondragstart="drag(event)">
+	  <div class="lucky spellart"></div>
+	</div>
+	<div id="sleep" class="charisma spell sleep wizard" draggable="true" ondragstart="drag(event)">
+	  <div class="sleep spellart"></div>
 	</div>
 	<div id="inspire" class="charisma spell bard paladin" draggable="true" ondragstart="drag(event)">
 	  <div class="inspire spellart"></div>
@@ -361,6 +398,9 @@ left: 0cm;
 	</div>
 	<div id="soulmusic" class="charisma spell bard" draggable="true" ondragstart="drag(event)">
 	  <div class="soulmusic spellart"></div>
+	</div>
+	<div id="metamagic" class="charisma spell sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="metamagic spellart"></div>
 	</div>
 	<div id="mindcontrol" class="charisma spell sorcerer warlock bard" draggable="true" ondragstart="drag(event)">
 	  <div class="mindcontrol spellart"></div>
@@ -391,6 +431,12 @@ left: 0cm;
 	</div>
 	<div id="shieldslam" class="strength spell fighter" draggable="true" ondragstart="drag(event)">
 	  <div class="shieldslam spellart"></div>
+	</div>
+	<div id="roar" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="roar spellart"></div>
+	</div>
+	<div id="charge" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="charge spellart"></div>
 	</div>
 	<div id="archery" class="dexterity spell ranger" draggable="true" ondragstart="drag(event)">
 	  <div class="archery spellart"></div>
@@ -427,6 +473,12 @@ left: 0cm;
 	</div>
 	<div id="flyingsword" class="dexterity spell bard ranger rogue" draggable="true" ondragstart="drag(event)">
 	  <div class="flyingsword spellart"></div>
+	</div>
+	<div id="poison" class="dexterity spell ranger rogue warlock bard witch" draggable="true" ondragstart="drag(event)">
+	  <div class="poison spellart"></div>
+	</div>
+	<div id="stealth" class="dexterity spell ranger rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="stealth spellart"></div>
 	</div>
 </div>
 <div class="about">
