@@ -12,26 +12,35 @@ var spells = {
 	firewave: { title: "Firewave", description: "A blaze of fire burning in a line", reallife: "\"Passionately fix all problems that lie in front of you\"" },
 	teleport: { title: "Teleport", description: "Magically disapear and appear at a different point of space and time", reallife: "\"Seem to be anywhere, everywhere anytime...\"" },
 	reflect: { title: "Reflect", description: "repel an attack", reallife: "\"under attack, produce a counter argument, thought or idea\"" },
+	magicbarrier: { title: "Magic Barrier", description: "magically block an attack", reallife: "\"under attack, intelligently defend against harsh words or actions directed against you\"" },
 	wildmagic: { title: "Wild Magic", description: "A random frog, fire sparks, meteor showers, sizzle your hair, you name it!", reallife: "\"use your wits and energy to achieve random feats of highs and lows...\"" },
 	timestop: { title: "Time Stop", description: "Stop the time around you for a limited duration", reallife: "\"Nobody stops time. Unless you manage to do things faster and better than anyone else around you and make little to no mistakes... \"" },	
+	missile: { title: "Missile", description: "A brilliant piece of engineered fire launching weaponry", reallife: "\"engineer a major fix to a problem... \"" },		
 	heal: { title: "Heal", description: "Heal person", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you are there to turn it around by words and actions\"" },		
 	regen: { title: "Regenerate", description: "Regenerate life", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you are there everyday to help\"" },			
 	blessing: { title: "Blessing", description: "Bless person", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you pray so they get better or stronger\"" },				
 	holyshield: { title: "Holy Shield", description: "Bestow a divine shield", reallife: "\"Pray for someone's protection\"" },					
 	holysword: { title: "Holy Sword", description: "Strike and banish all evil", reallife: "\"Seek to do that what is just and right\"" },					
 	mount: { title: "Mount", description: "Ride a mighty steed / wolf / eagle or the like", reallife: "\"Enjoy and excel at riding your vehicle or any means of locomotion\"" },					
-	summonpet: { title: "Summon Pet", description: "Call your most trusted animal friend companion", reallife: "\"Your pet is your loyal friend and gives you strength\"" },					
+	summonpet: { title: "Summon Pet", description: "Call your most trusted animal friend companion", reallife: "\"Your pet is your loyal friend and gives you strength\"" },
+	summonbug: { title: "Summon Bug", description: "Call your most trusted bug companions", reallife: "\"Your bugs are your loyal friends and give you strength\"" },	
 	callofthewild: { title: "Call of the Wild", description: "Call all friends of the wild to your aid", reallife: "\"true nature lover, work closely to the preservation of wildlife and nature\"" },					
 	moonbeam: { title: "Moonbeam", description: "Shoot a laser beam from the moon", reallife: "\"A precise fix that seem to come out of nowhere\"" },						
 	sunblast: { title: "Sunblast", description: "Shoot a burst of energy from the sun", reallife: "\"A powerful fix that seem to come out of nowhere\"" },						
 	wildgrowth: { title: "Wild Growth", description: "Vines grow everywhere", reallife: "\"Love nature and wildlife deeply\"" },							
 	entangle: { title: "Entangle", description: "Vines sprout and immobilise target in place", reallife: "\"Stop someone in their tracks and actions\"" },								
 	shapeshift: { title: "Shapeshift", description: "Transform into a nature being", reallife: "\"Survive in your environment\"" },							
+	aurabolt: { title: "Aura Bolt", description: "A blast of energy using one's life force", reallife: "\"Solving many issues with heart\"" },
+	meditate: { title: "Meditate", description: "Heal heart, body and soul", reallife: "\"Meditate and take a pause from your busy life\"" },
+	enlightenment: { title: "Enlightenment", description: "Realise your true potential", reallife: "\"Meditate and reach a better understanding of you and your capabilities\"" },	
 	charm: { title: "Charm", description: "Charm a person to act for you", reallife: "\"Coerce someone into taking action by the force of your personality\"" },						
+	lucky: { title: "Lucky", description: "Have a better chance to anything", reallife: "\"The world seems to smile on you\"" },
+	sleep: { title: "Sleep", description: "Lull targets into sleep", reallife: "\"Your words or actions tend to lull your audience to sleep or help people to rest \"" },	
 	inspire: { title: "Inspire", description: "Boost a person's innate abilities", reallife: "\"By words, music or action, help others find their better selves and hence perform better in their endeavours\"" },						
 	favoredsoul: { title: "Favored Soul", description: "Boost own stats by a certain amount", reallife: "\"A star seems to shine upon you and luck is on your side\"" },							
 	animate: { title: "Animate", description: "Bring an inanimate object to life", reallife: "\"Although not literally, animation is in everyday life as moving pictures, bubbling sounds, robots...\"" },	
 	soulmusic: { title: "Soul Music", description: "Boost a group's attributes", reallife: "\"By music, improve people's spirits!\"" },	
+	metamagic: { title: "Meta Magic", description: "Reshape the essence of magic and bend it to your will", reallife: "\"Easily decide how to handle the small and big problems and apply the right fixes\"" },	
 	mindcontrol: { title: "Mind Control", description: "Take over a person's mind to make them act for you", reallife: "\"By coercion, intimidation, deception or manipulation among others, convince other people to think little of themselves and make them work for you\"" },						
 	summondemon: { title: "Summon Demon", description: "Summon a random demon", reallife: "\"Any means is good to achieve your goals, no matter how bad the means\"" },						
 	hex: { title: "Hex", description: "Put a curse on your target", reallife: "\"Curse, deceive or badmouth someone\"" },							
@@ -42,6 +51,8 @@ var spells = {
 	swipe: { title: "Swipe", description: "A slicing movement laterally cutting through the air", reallife: "\"try to get a major swipe at a problem\"" },
 	lightningblade: { title: "Lightning Blade", description: "A fast slash of the blade with electrifying effect", reallife: "\"Tackle a single problem fast and effectively\"" },	
 	shieldslam: { title: "Shield Slam", description: "Your shield serves you as a weapon to stun your enemy", reallife: "\"Turn what you would use to defend yourself onto a problem solving idea or action\"" },
+	roar: { title: "Roar", description: "Raise your spirit and dampen the spirit of others near you", reallife: "\"Buoyantly and passionately speak and act in front of others\"" },
+	charge: { title: "Charge", description: "Rush quickly and violently forward towards a target", reallife: "\"You target and tackle a single problem assiduously without concerning yourself with other things near you\"" },
 	archery: { title: "Archery", description: "You are able to effectively use bow and arrows", reallife: "\"You have a direct approach and all about finishing targets\"" },
 	rainarrows: { title: "Rain Arrows", description: "an array of arrows fall from the sky", reallife: "\"Try to fix as many problems as you can, hoping that as many of them are fixed\"" },
 	firearrows: { title: "Fire Arrows", description: "a volley of flaming arrows", reallife: "\"Try to fix as many problems as you can, with each fix having a higher chance of success\"" },	
@@ -54,6 +65,8 @@ var spells = {
 	backstab: { title: "Backstab", description: "Sneak attack a target", reallife: "\"A blow behind someone's back\"" },
 	haste: { title: "Haste", description: "Boost own speed", reallife: "\"Work or act faster\"" },							
 	flyingsword: { title: "Flying Sword", description: "Your dexterity allows you to keep your sword flying in the air", reallife: "\"Achieve the art of multitasking \"" },
+	poison: { title: "Poison", description: "A concoction to slowly afflict targets over time", reallife: "\"Devise a fix that slowly breaks down problems over time\"" },
+	stealth: { title: "Stealth", description: "Move undetected, almost invisible", reallife: "\"do something without other knowing\"" },
 };
 
 function init(){
@@ -95,6 +108,7 @@ function init(){
 		GetClassPercentage('warlock');
 		GetClassPercentage('witch');
 		GetClassPercentage('necromancer');
+		GetClassPercentage('artificer');
 		
 		$('.whatismypersonality p').sort(sort_p).appendTo('.whatismypersonality');
 		
