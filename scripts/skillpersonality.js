@@ -19,7 +19,7 @@ var spells = {
 	silence: { title: "Silence", description: "Silence is golden... no magic allowed", reallife: "\"Make it so that my own idea prevails over others\"" },
 	invisibility: { title: "Invisibility", description: "Make yourself invisible", reallife: "\"Quietly and stealthily achieve your goals\"" },		
 	timestop: { title: "Time Stop", description: "Stop the time around you for a limited duration", reallife: "\"Nobody stops time. Unless you manage to do things faster and better than anyone else around you and make little to no mistakes... \"" },	
-	missile: { title: "Missile", description: "A brilliant piece of engineered fire launching weaponry", reallife: "\"engineer a major fix to a problem... \"" },		
+	bullet: { title: "Bullet", description: "A brilliant piece of engineered fire launching weaponry", reallife: "\"engineer a major fix to a problem... \"" },		
 	heal: { title: "Heal", description: "Heal person", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you are there to turn it around by words and actions\"" },		
 	regen: { title: "Regenerate", description: "Regenerate life", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you are there everyday to help\"" },			
 	blessing: { title: "Blessing", description: "Bless person", reallife: "\"Someone injured, feeling low, depressed, full of doubts or sadness, you pray so they get better or stronger\"" },				
