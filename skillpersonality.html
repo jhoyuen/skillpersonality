@@ -2,8 +2,13 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="http://allfont.net/allfont.css?fonts=runic" rel="stylesheet" type="text/css" />
+<!-- <link href="http://allfont.net/allfont.css?fonts=runic" rel="stylesheet" type="text/css" /> -->
 <style type="text/css">
+@font-face {
+  font-family: runic;
+  src: url('resources/ComicRunes.otf');
+}
+
 body{ background: #000; text-align:center;user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
@@ -41,12 +46,13 @@ table td.skill {
 }
 
 .menu .page-title{
-	font-family: "Runic", "Garamond";
+	font-family: "runic", "Garamond";
 	font-size: 2cm;
 	text-align: center;
-	margin-bottom:20px;
-	margin-top:15px;
+	margin-bottom:16px;
+	margin-top:0;
 	color: mintcream;
+	text-shadow: 0 0 15px hsla(0, 0%, 100%, 1), /* bloom */ 0 2px 4px hsla(0, 0%, 0%, 0.7);
 }
 
 .menu a{
@@ -326,9 +332,9 @@ left: 0cm;
 .thrust{ background: url('images/thrust.png');} 
 .lethalstrike{ background: url('images/lethalstrike.png');} 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .menu .page-title {
-    font-size: 1.5cm;
+    font-size: 1.1cm;
 	margin-bottom:10px;
   }
 }
