@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="http://allfont.net/allfont.css?fonts=runic" rel="stylesheet" type="text/css" />
 <style type="text/css">
 body{ background: #000; text-align:center;user-select: none; /* supported by Chrome and Opera */
@@ -63,7 +64,7 @@ table td.skill {
 }
 
 .menu a:hover{
-	color: mintcream;
+	color: #fff;
 }
 
 .whatismypersonality, #whatismypersonality{
@@ -83,10 +84,9 @@ table td.skill {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	height: 2.9cm;
+	height: 3.6cm;
 	width: 100%;
 	background: url('images/header.jpg') 0 0;
-	border-bottom: double 3px silver;
 	border-top: double 3px beige;
 	z-index:100;
 	text-align:left;
@@ -100,6 +100,15 @@ table td.skill {
 	top: 0;
 	height: 2.4cm;
 	width: 56cm;
+}
+
+.copyright{
+	display:inline-block;
+	width: 100%;
+	font-family: "Garamond";
+	font-size: 14px;
+	text-align: center;
+	color: mintcream;
 }
 
 .spell-list, .personality, .spell-item, .about, .whatismypersonality{
@@ -316,6 +325,26 @@ left: 0cm;
 .scout{ background: url('images/scout.png');}  
 .thrust{ background: url('images/thrust.png');} 
 .lethalstrike{ background: url('images/lethalstrike.png');} 
+
+@media only screen and (max-width: 400px) {
+  .menu .page-title {
+    font-size: 1.5cm;
+	margin-bottom:10px;
+  }
+}
+@media (pointer:none), (pointer:coarse) {
+	.footer {
+		height: 3.1cm;
+	}
+  
+	.footer-content{
+		height: 2.2cm;
+	}
+	
+	.copyright{
+		margin-top: 6px;
+	}
+}
 
 </style>
 </head>
@@ -750,6 +779,8 @@ left: 0cm;
 <div class="skilltemplate" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <div class="skilltemplate" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
+<div class="copyright">
+	&copy; Doremi at <i>La Vista</i> <span id="toYear"></span>
 </div>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/class.js"></script>
@@ -757,6 +788,16 @@ left: 0cm;
 <script type="text/javascript">
 $(document).ready(function(){
 	init();
+	
+	var thisYear = 2020;
+	var toYear = new Date().getFullYear();
+	if(thisYear == toYear)
+	{
+		$('#toYear').text(new Date().getFullYear());
+	}
+	else{
+		$('#toYear').text(thisYear + ' - ' + new Date().getFullYear());
+	}
 });
 </script>
 </body>
