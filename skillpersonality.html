@@ -1,8 +1,13 @@
 <!doctype html>
 <html>
 <head>
+<link href="http://allfont.net/allfont.css?fonts=runic" rel="stylesheet" type="text/css" />
 <style type="text/css">
-body{ background: #000; text-align:center; }
+body{ background: #000; text-align:center;user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */ }
 hr{ border: dotted 1px #dedede;}
 
 table {
@@ -27,41 +32,38 @@ table td.skill {
 	left: 0;
 	width: 100%;
 	height: 150px;
-	background: #dedede;
+	background: url('images/header.jpg');
 	border-bottom: double 3px silver;
+	border-radius: 0 0 10px 10px;
 	z-index:100;
 	text-align:center;
 }
 
 .menu .page-title{
-	font-family: "Garamond";
+	font-family: "Runic", "Garamond";
 	font-size: 2cm;
 	text-align: center;
 	margin-bottom:20px;
+	margin-top:15px;
+	color: mintcream;
 }
 
 .menu a{
+	display: inline-block;
 	text-decoration: none;
-    background-image: linear-gradient( /* chrome */ hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0) 50%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 100%, 0.2) );
-    font-size: 16px;
-    font-family: sans-serif;
+    font-size: 18px;
+    font-family: "Garamond";
     font-weight: bold;
-    color: #343434;
-    padding: 13px 20px;
+    color: silver;
+    padding: 0;
     text-shadow: 0 0 15px hsla(0, 0%, 100%, 1), /* bloom */ 0 2px 4px hsla(0, 0%, 0%, 0.7);
-    border: solid 1px silver;
-    border-radius: 30px;
     margin: 5px;
-    inset 0 5px 20px hsla(0, 0%, 100%, 0.4),: ;
-    0px 0px 0px hsla(0, 0%, 0%, 0.15),: ;
-    5px 18px 10px hsla(0, 0%, 0%, 0.2): ;
-    */: ;
+	margin-right:10px;
     cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .menu a:hover{
-	background-color: skyblue;
+	color: mintcream;
 }
 
 .whatismypersonality, #whatismypersonality{
@@ -73,7 +75,7 @@ table td.skill {
 .content{
 	width: 100%;
 	margin-top: 160px; 
-	background: #000;
+	background: url('images/content_slice.jpg');
 	text-align:center;
 	margin-bottom: 2.2cm;
 }
@@ -81,13 +83,15 @@ table td.skill {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	height: 2.6cm;
+	height: 2.9cm;
 	width: 100%;
-	background: #dedede;
+	background: url('images/header.jpg') 0 0;
 	border-bottom: double 3px silver;
+	border-top: double 3px beige;
 	z-index:100;
 	text-align:left;
 	padding: 10px;
+	padding-bottom: 0;
 	overflow-x: auto;
 }
 
@@ -98,7 +102,7 @@ table td.skill {
 	width: 56cm;
 }
 
-.spell-list, .personality, .spell-item, .about{
+.spell-list, .personality, .spell-item, .about, .whatismypersonality{
 	vertical-align: top;
 	text-align: center;
 	font-family: Georgia, Serif;
@@ -153,7 +157,10 @@ table td.skill {
   width: 2.1cm;
   height:2.1cm;
   display: inline-block;
-  border: dotted 1px #000;
+  border: solid 1px silver;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
 }
 
 .spell{
@@ -217,19 +224,23 @@ left: 0cm;
 .forcecage{ background: url('images/forcecage.png');}
 .silence{ background: url('images/silence.png');}
 .invisibility{ background: url('images/invisibility.png');}
+.fly{ background: url('images/fly.png');}
 .timestop{ background: url('images/timestop.png');}
-.bullet{ background: url('images/bullet.png');}
+.warp{ background: url('images/warp.png');}
 .heal{ background: url('images/heal.png');} 
 .regen{ background: url('images/regen.png');} 
 .blessing{ background: url('images/blessing.png');} 
 .holyshield{ background: url('images/holyshield.png');}
 .holysword{ background: url('images/holysword.png');}
+.holyaura{ background: url('images/holyaura.png');}
 .mount{ background: url('images/mount.png');}
 .summonpet{ background: url('images/summonpet.png');} 
 .summonbug{ background: url('images/summonbug.png');} 
 .callofthewild{ background: url('images/callofthewild.png');} 
 .moonbeam{ background: url('images/moonbeam.png');} 
+.starfall{ background: url('images/starfall.png');} 
 .sunblast{ background: url('images/sunblast.png');}
+.healingbean{ background: url('images/healingbean.png');} 
 .galeforce{ background: url('images/galeforce.png');} 
 .wildgrowth{ background: url('images/wildgrowth.png');}
 .entangle{ background: url('images/entangle.png');} 
@@ -237,7 +248,7 @@ left: 0cm;
 .aurabolt{ background: url('images/aurabolt.png');} 
 .meditate{ background: url('images/meditate.png');} 
 .enlightenment{ background: url('images/enlightenment.png');} 
-.flyingkick{ background: url('images/flyingkick.png');} 
+.windwalk{ background: url('images/windwalk.png');} 
 .charm{ background: url('images/charm.png');} 
 .lucky{ background: url('images/lucky.png');}
 .sleep{ background: url('images/sleep.png');}
@@ -245,6 +256,8 @@ left: 0cm;
 .favoredsoul{ background: url('images/favoredsoul.png');} 
 .animate{ background: url('images/animate.png');}
 .soulmusic{ background: url('images/soulmusic.png');}
+.leadership{ background: url('images/leadership.png');}
+.heartandsoul{ background: url('images/heartandsoul.png');}
 .metamagic{ background: url('images/metamagic.png');}
 .mindcontrol{ background: url('images/mindcontrol.png');}
 .summondemon{ background: url('images/summondemon.png');} 
@@ -265,9 +278,20 @@ left: 0cm;
 .swipe{ background: url('images/swipe.png');}
 .doubleslash{ background: url('images/doubleslash.png');}
 .counterstrike{ background: url('images/counterstrike.png');}
+.parry{ background: url('images/parry.png');}
+.criticalblow{ background: url('images/criticalblow.png');}
 .lightningblade{ background: url('images/lightningblade.png');} 
+.waterblade{ background: url('images/waterblade.png');} 
 .rocksplittingsabre{ background: url('images/rocksplittingsabre.png');} 
+.soulblade{ background: url('images/soulblade.png');} 
 .shieldslam{ background: url('images/shieldslam.png');} 
+.chains{ background: url('images/chains.png');} 
+.sledgehammer{ background: url('images/sledgehammer.png');} 
+.axemanship{ background: url('images/axemanship.png');} 
+.explosiveblow{ background: url('images/explosiveblow.png');} 
+.staff{ background: url('images/staff.png');} 
+.meteorhammer{ background: url('images/meteorhammer.png');} 
+.armada{ background: url('images/armada.png');} 
 .roar{ background: url('images/roar.png');} 
 .charge{ background: url('images/charge.png');} 
 .archery{ background: url('images/archery.png');} 
@@ -278,16 +302,20 @@ left: 0cm;
 .snipe{ background: url('images/snipe.png');}  
 .trap{ background: url('images/trap.png');} 
 .track{ background: url('images/track.png');} 
-.bomb{ background: url('images/bomb.png');} 
+.bomb{ background: url('images/bomb.png');}
+.bullet{ background: url('images/bullet.png');} 
 .flashfist{ background: url('images/flashfist.png');} 
+.flyingkick{ background: url('images/flyingkick.png');} 
 .flurryofdaggers{ background: url('images/flurryofdaggers.png');} 
 .backstab{ background: url('images/backstab.png');} 
 .haste{ background: url('images/haste.png');} 
 .combo{ background: url('images/combo.png');} 
 .flyingsword{ background: url('images/flyingsword.png');}
 .poison{ background: url('images/poison.png');}  
-.stealth{ background: url('images/stealth.png');}  
+.stealth{ background: url('images/stealth.png');} 
+.scout{ background: url('images/scout.png');}  
 .thrust{ background: url('images/thrust.png');} 
+.lethalstrike{ background: url('images/lethalstrike.png');} 
 
 </style>
 </head>
@@ -301,7 +329,9 @@ left: 0cm;
 </div>
 <div class="content">
 <div class="spell-list">
-<div id="fireball" title="Fireball" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)"><div class="fireball spellart"></div></div>
+	<div id="fireball" title="Fireball" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
+		<div class="fireball spellart"></div>
+	</div>
 	<div id="meteor" title="Meteor" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="meteor spellart"></div>
 	</div>
@@ -335,13 +365,13 @@ left: 0cm;
 	<div id="teleport" title="Teleport" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="teleport spellart"></div>
 	</div>
-	<div id="reflect" title="Reflect" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	<div id="reflect" title="Reflect" class="intelligence spell wizard sorcerer witch necromancer priest" draggable="true" ondragstart="drag(event)">
 	  <div class="reflect spellart"></div>
 	</div>
 	<div id="magicmissiles" title="Magic Missiles" class="intelligence spell wizard sorcerer warlock" draggable="true" ondragstart="drag(event)">
 	  <div class="magicmissiles spellart"></div>
 	</div>
-	<div id="magicbarrier" title="Magic Barrer" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	<div id="magicbarrier" title="Magic Barrer" class="intelligence spell wizard necromancer sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="magicbarrier spellart"></div>
 	</div>
 	<div id="wildmagic" title="Wild Magic" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
@@ -353,16 +383,19 @@ left: 0cm;
 	<div id="silence" title="Silence" class="intelligence spell wizard sorcerer bard warlock witch" draggable="true" ondragstart="drag(event)">
 	  <div class="silence spellart"></div>
 	</div>
-	<div id="invisibility" title="Invisibility" class="intelligence spell wizard sorcerer bard rogue ranger fighter" draggable="true" ondragstart="drag(event)">
+	<div id="invisibility" title="Invisibility" class="intelligence spell wizard sorcerer bard rogue ranger fighter witch" draggable="true" ondragstart="drag(event)">
 	  <div class="invisibility spellart"></div>
+	</div>
+	<div id="fly" title="Fly" class="intelligence spell wizard sorcerer bard warlock witch" draggable="true" ondragstart="drag(event)">
+	  <div class="fly spellart"></div>
 	</div>
 	<div id="timestop" title="Time Stop" class="intelligence spell wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="timestop spellart"></div>
 	</div>
-	<div id="bullet" title="Bullet" class="intelligence spell artificer" draggable="true" ondragstart="drag(event)">
-	  <div class="bullet spellart"></div>
+	<div id="warp" title="Warp" class="intelligence spell wizard" draggable="true" ondragstart="drag(event)">
+	  <div class="warp spellart"></div>
 	</div>
-	<div id="heal" title="Heal" class="wisdom spell priest paladin bard druid" draggable="true" ondragstart="drag(event)">
+	<div id="heal" title="Heal" class="wisdom spell priest paladin bard druid witch" draggable="true" ondragstart="drag(event)">
 	  <div class="heal spellart"></div>
 	</div>
 	<div id="regen" title="Regenerate" class="wisdom spell priest paladin bard druid" draggable="true" ondragstart="drag(event)">
@@ -377,23 +410,32 @@ left: 0cm;
 	<div id="holysword" title="Holy Sword" class="wisdom spell paladin" draggable="true" ondragstart="drag(event)">
 	  <div class="holysword spellart"></div>
 	</div>
+	<div id="holyaura" title="Holy Aura" class="wisdom spell paladin priest" draggable="true" ondragstart="drag(event)">
+	  <div class="holyaura spellart"></div>
+	</div>
 	<div id="mount" title="Mount" class="wisdom spell paladin" draggable="true" ondragstart="drag(event)">
 	  <div class="mount spellart"></div>
 	</div>
-	<div id="summonpet" title="Summon Pet" class="wisdom spell paladin ranger bard" draggable="true" ondragstart="drag(event)">
+	<div id="summonpet" title="Summon Pet" class="wisdom spell ranger bard" draggable="true" ondragstart="drag(event)">
 	  <div class="summonpet spellart"></div>
 	</div>
-	<div id="summonbug" title="Summon Bugs" class="wisdom spell druid ranger bard sorcerer" draggable="true" ondragstart="drag(event)">
+	<div id="summonbug" title="Summon Bugs" class="wisdom spell druid ranger bard necromancer sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="summonbug spellart"></div>
 	</div>
 	<div id="callofthewild" title="Call of the Wild" class="wisdom spell ranger druid" draggable="true" ondragstart="drag(event)">
 	  <div class="callofthewild spellart"></div>
 	</div>
-	<div id="moonbeam" title="Moonbeam" class="wisdom spell druid" draggable="true" ondragstart="drag(event)">
+	<div id="moonbeam" title="Moonbeam" class="wisdom spell druid wizard" draggable="true" ondragstart="drag(event)">
 	  <div class="moonbeam spellart"></div>
 	</div>
-	<div id="sunblast" title="Sunblast" class="wisdom spell druid" draggable="true" ondragstart="drag(event)">
+	<div id="starfall" title="Starfall" class="wisdom spell druid wizard" draggable="true" ondragstart="drag(event)">
+	  <div class="starfall spellart"></div>
+	</div>
+	<div id="sunblast" title="Sunblast" class="wisdom spell druid wizard" draggable="true" ondragstart="drag(event)">
 	  <div class="sunblast spellart"></div>
+	</div>
+	<div id="healingbean" title="Healing Bean" class="wisdom spell druid priest" draggable="true" ondragstart="drag(event)">
+	  <div class="healingbean spellart"></div>
 	</div>
 	<div id="galeforce" title="Gale Force" class="wisdom spell druid sorcerer bard witch" draggable="true" ondragstart="drag(event)">
 	  <div class="galeforce spellart"></div>
@@ -407,19 +449,19 @@ left: 0cm;
 	<div id="shapeshift" title="Shapeshift" class="wisdom spell druid" draggable="true" ondragstart="drag(event)">
 	  <div class="shapeshift spellart"></div>
 	</div>
-	<div id="aurabolt" title="Aura Bolt" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
+	<div id="aurabolt" title="Aura Bolt" class="wisdom spell monk paladin priest" draggable="true" ondragstart="drag(event)">
 	  <div class="aurabolt spellart"></div>
 	</div>
-	<div id="meditate" title="Meditate" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
+	<div id="meditate" title="Meditate" class="wisdom spell monk priest" draggable="true" ondragstart="drag(event)">
 	  <div class="meditate spellart"></div>
 	</div>
-	<div id="enlightenment" title="enlightenment" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
+	<div id="enlightenment" title="enlightenment" class="wisdom spell monk priest" draggable="true" ondragstart="drag(event)">
 	  <div class="enlightenment spellart"></div>
 	</div>
-	<div id="flyingkick" title="Flying Kick" class="wisdom spell monk" draggable="true" ondragstart="drag(event)">
-	  <div class="flyingkick spellart"></div>
+	<div id="windwalk" title="Windwalk" class="wisdom spell rogue ranger monk fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="windwalk spellart"></div>
 	</div>
-	<div id="charm" title="Charm" class="charisma spell bard sorcerer warlock witch" draggable="true" ondragstart="drag(event)">
+	<div id="charm" title="Charm" class="charisma spell bard sorcerer warlock necromancer witch" draggable="true" ondragstart="drag(event)">
 	  <div class="charm spellart"></div>
 	</div>
 	<div id="lucky" title="Lucky" class="charisma spell bard" draggable="true" ondragstart="drag(event)">
@@ -428,28 +470,34 @@ left: 0cm;
 	<div id="sleep" title="Sleep" class="charisma spell sleep bard" draggable="true" ondragstart="drag(event)">
 	  <div class="sleep spellart"></div>
 	</div>
-	<div id="inspire" title="Inspire" class="charisma spell bard paladin" draggable="true" ondragstart="drag(event)">
+	<div id="inspire" title="Inspire" class="charisma spell bard" draggable="true" ondragstart="drag(event)">
 	  <div class="inspire spellart"></div>
 	</div>
-	<div id="favoredsoul" title="Favoured Soul" class="charisma spell bard sorcerer" draggable="true" ondragstart="drag(event)">
+	<div id="favoredsoul" title="Favoured Soul" class="charisma spell bard sorcerer priest druid" draggable="true" ondragstart="drag(event)">
 	  <div class="favoredsoul spellart"></div>
 	</div>
-	<div id="animate" title="Animate" class="charisma spell bard sorcerer warlock" draggable="true" ondragstart="drag(event)">
+	<div id="animate" title="Animate" class="charisma spell bard sorcerer warlock necromancer" draggable="true" ondragstart="drag(event)">
 	  <div class="animate spellart"></div>
 	</div>
-	<div id="soulmusic" title="Soul Music" class="charisma spell bard" draggable="true" ondragstart="drag(event)">
+	<div id="soulmusic" title="Soul Music" class="charisma spell bard necromancer" draggable="true" ondragstart="drag(event)">
 	  <div class="soulmusic spellart"></div>
+	</div>
+	<div id="leadership" title="Leadership" class="charisma spell fighter paladin bard sorcerer warlock necromancer priest" draggable="true" ondragstart="drag(event)">
+	  <div class="leadership spellart"></div>
+	</div>
+	<div id="heartandsoul" title="Heart and Soul" class="charisma spell fighter barbarian paladin bard" draggable="true" ondragstart="drag(event)">
+	  <div class="heartandsoul spellart"></div>
 	</div>
 	<div id="metamagic" title="Meta Magic" class="charisma spell sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="metamagic spellart"></div>
 	</div>
-	<div id="mindcontrol" title="Mind Control" class="charisma spell sorcerer warlock bard" draggable="true" ondragstart="drag(event)">
+	<div id="mindcontrol" title="Mind Control" class="charisma spell sorcerer warlock necromancer bard" draggable="true" ondragstart="drag(event)">
 	  <div class="mindcontrol spellart"></div>
 	</div>
-	<div id="summondemon" title="Summon Demon" class="charisma spell warlock" draggable="true" ondragstart="drag(event)">
+	<div id="summondemon" title="Summon Demon" class="charisma spell warlock necromancer" draggable="true" ondragstart="drag(event)">
 	  <div class="summondemon spellart"></div>
 	</div>
-	<div id="hex" title="Hex" class="charisma spell warlock bard sorceror witch" draggable="true" ondragstart="drag(event)">
+	<div id="hex" title="Hex" class="charisma spell warlock bard sorceror witch necromancer" draggable="true" ondragstart="drag(event)">
 	  <div class="hex spellart"></div>
 	</div>
 	<div id="crystalball" title="Crystal Ball" class="charisma spell warlock sorceror" draggable="true" ondragstart="drag(event)">
@@ -491,7 +539,7 @@ left: 0cm;
 	<div id="whirlwind" title="Whirlwind" class="strength spell fighter barbarian battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="whirlwind spellart"></div>
 	</div>
-	<div id="swipe" title="Swipe" class="strength spell fighter" draggable="true" ondragstart="drag(event)">
+	<div id="swipe" title="Swipe" class="strength spell fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="swipe spellart"></div>
 	</div>
 	<div id="doubleslash" title="Double Slash" class="strength spell fighter barbarian ranger rogue" draggable="true" ondragstart="drag(event)">
@@ -500,19 +548,49 @@ left: 0cm;
 	<div id="counterstrike" title="Counter Strike" class="strength spell fighter ranger rogue monk" draggable="true" ondragstart="drag(event)">
 	  <div class="counterstrike spellart"></div>
 	</div>
+	<div id="parry" title="Parry" class="strength spell fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="parry spellart"></div>
+	</div>
+	<div id="criticalblow" title="Critical Blow" class="strength spell fighter barbarian battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="criticalblow spellart"></div>
+	</div>
 	<div id="lightningblade" title="Lightning Blade" class="strength spell fighter ranger rogue battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="lightningblade spellart"></div>
+	</div>
+	<div id="waterblade" title="Water Blade" class="strength spell fighter ranger rogue battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="waterblade spellart"></div>
 	</div>
 	<div id="rocksplittingsabre" title="Rock-splitting Sabre" class="strength spell fighter ranger rogue battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="rocksplittingsabre spellart"></div>
 	</div>
-	<div id="shieldslam" title="Shield Slam" class="strength spell fighter" draggable="true" ondragstart="drag(event)">
+	<div id="soulblade" title="Soul Blade" class="strength spell fighter barbarian battlemage warlock paladin" draggable="true" ondragstart="drag(event)">
+	  <div class="soulblade spellart"></div>
+	</div>
+	<div id="shieldslam" title="Shield Slam" class="strength spell fighter paladin" draggable="true" ondragstart="drag(event)">
 	  <div class="shieldslam spellart"></div>
 	</div>
-	<div id="roar" title="Roar" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
-	  <div class="roar spellart"></div>
+	<div id="chains" title="Chains" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="chains spellart"></div>
 	</div>
-	<div id="charge" title="Charge" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	<div id="sledgehammer" title="Sledgehammer" class="strength spell fighter barbarian paladin" draggable="true" ondragstart="drag(event)">
+	  <div class="sledgehammer spellart"></div>
+	</div>
+	<div id="axemanship" title="Axemanship" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="axemanship spellart"></div>
+	</div>
+	<div id="explosiveblow" title="Explosive Blow" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="explosiveblow spellart"></div>
+	</div>
+	<div id="staff" title="Staff" class="strength spell fighter monk wizard sorcerer warlock bard druid" draggable="true" ondragstart="drag(event)">
+	  <div class="staff spellart"></div>
+	</div>
+	<div id="meteorhammer" title="Meteor Hammer" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="meteorhammer spellart"></div>
+	</div>
+	<div id="armada" title="Armada" class="strength spell fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="armada spellart"></div>
+	</div>
+	<div id="charge" title="Charge" class="strength spell fighter barbarian monk" draggable="true" ondragstart="drag(event)">
 	  <div class="charge spellart"></div>
 	</div>
 	<div id="archery" title="Archery" class="dexterity spell ranger" draggable="true" ondragstart="drag(event)">
@@ -542,8 +620,14 @@ left: 0cm;
 	<div id="bomb" title="Bomb" class="dexterity spell ranger" draggable="true" ondragstart="drag(event)">
 	  <div class="bomb spellart"></div>
 	</div>
+	<div id="bullet" title="Bullet" class="dexterity spell artificer" draggable="true" ondragstart="drag(event)">
+	  <div class="bullet spellart"></div>
+	</div>
 	<div id="flashfist" title="Flash Fist" class="dexterity spell monk" draggable="true" ondragstart="drag(event)">
 	  <div class="flashfist spellart"></div>
+	</div>
+	<div id="flyingkick" title="Flying Kick" class="dexterity spell monk" draggable="true" ondragstart="drag(event)">
+	  <div class="flyingkick spellart"></div>
 	</div>
 	<div id="flurryofdaggers" title="Flurry of Daggers" class="dexterity spell rogue" draggable="true" ondragstart="drag(event)">
 	  <div class="flurryofdaggers spellart"></div>
@@ -560,16 +644,21 @@ left: 0cm;
 	<div id="flyingsword" title="Flying Sword" class="dexterity spell bard ranger rogue" draggable="true" ondragstart="drag(event)">
 	  <div class="flyingsword spellart"></div>
 	</div>
-	<div id="poison" title="Poison" class="dexterity spell ranger rogue warlock bard witch" draggable="true" ondragstart="drag(event)">
+	<div id="poison" title="Poison" class="dexterity spell ranger rogue warlock bard witch necromancer" draggable="true" ondragstart="drag(event)">
 	  <div class="poison spellart"></div>
 	</div>
 	<div id="stealth" title="Stealth" class="dexterity spell ranger rogue" draggable="true" ondragstart="drag(event)">
 	  <div class="stealth spellart"></div>
 	</div>
+	<div id="scout" title="Scout" class="dexterity spell ranger rogue bard" draggable="true" ondragstart="drag(event)">
+	  <div class="scout spellart"></div>
+	</div>
 	<div id="thrust" title="Thrust" class="dexterity spell fighter bard rogue battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="thrust spellart"></div>
 	</div>
-	
+	<div id="lethalstrike" title="Lethal Strike" class="dexterity spell rogue monk" draggable="true" ondragstart="drag(event)">
+	  <div class="lethalstrike spellart"></div>
+	</div>
 </div>
 <div class="about">
 <h3>About</h3>
