@@ -28,12 +28,14 @@ var bard = 0;
 
 function GetClassPercentage(className){	
   var selectedSkillsCount = $('.skill').find('.spell').length;
+  selectedSkillsCount += $('.skill').find('.weapon').length;
+  selectedSkillsCount += $('.skill').find('.equipment').length;
+  
   var intelligenceCount = $('.skill').find('.intelligence').length;
   var wisdomCount = $('.skill').find('.wisdom').length;
   var charismaCount = $('.skill').find('.charisma').length;
   var strengthCount = $('.skill').find('.strength').length;
   var dexterityCount = $('.skill').find('.dexterity').length;
-  
   window[className] = 0;
   
   // if (intelligence['main'].includes(className))
@@ -91,6 +93,6 @@ function GetClassPercentage(className){
 	
 	if(window[className] != 0 && selectedSkillsCount != 0)
 	{
-		$('.whatismypersonality').append('<p data-classpercentage="' + ((window[className] / selectedSkillsCount) * 100) + '">' + className +': ' + ((window[className] / selectedSkillsCount) * 100).toFixed(2) + '%' + '</p>');
+		$('.mypersona').append('<p data-classpercentage="' + ((window[className] / selectedSkillsCount) * 100) + '">' + className +': ' + ((window[className] / selectedSkillsCount) * 100).toFixed(2) + '%' + '</p>');
 	}
 };

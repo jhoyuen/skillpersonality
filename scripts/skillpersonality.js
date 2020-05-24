@@ -131,12 +131,12 @@ function init(){
 			{scrollTop: $('.' + $(this).attr('id')).offset().top - 170}, 
         500);
 	});
-	$('a#whatismypersonality').off().on('click', function(){
+	$('a#mypersona').off().on('click', function(){
 		$('html, body').animate(
 			{scrollTop: $('.' + $(this).attr('id')).offset().top - 170}, 
         500);
 		
-		$('.whatismypersonality').html('');
+		$('.mypersona').html('');
 		GetClassPercentage('wizard');
 		GetClassPercentage('bard');
 		GetClassPercentage('sorcerer');
@@ -154,10 +154,17 @@ function init(){
 		GetClassPercentage('necromancer');
 		GetClassPercentage('artificer');
 		
-		$('.whatismypersonality p').sort(sort_p).appendTo('.whatismypersonality');
-		
-		function sort_p(a, b){
-			return ($(b).data('classpercentage')) - ($(a).data('classpercentage'));    
+		console.log($('.mypersona p').length);
+		if($('.mypersona p').length == 0)
+		{
+			$('.mypersona').html('<p>Hero! Your adventure has not yet begun. Choose your weapons, equipment and spells and venture on!</p>')
+		}
+		else{
+			$('.mypersona p').sort(sort_p).appendTo('.mypersona');
+			
+			function sort_p(a, b){
+				return ($(b).data('classpercentage')) - ($(a).data('classpercentage'));    
+			}
 		}
 	});
 }
@@ -173,5 +180,15 @@ function drag(ev) {
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  
+  console.log($(ev.target).hasClass('spell-container'));
+  console.log(data);
+  
+  if($(ev.target).hasClass('skilltemplate') || 
+	($(ev.target).hasClass('spell-container') && $('#' + data).hasClass('spell')) ||
+	($(ev.target).hasClass('weapon-container') && $('#' + data).hasClass('weapon')) ||
+	($(ev.target).hasClass('equipment-container') && $('#' + data).hasClass('equipment')))
+  {  
+	ev.target.appendChild(document.getElementById(data));
+  }
 }
