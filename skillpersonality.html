@@ -3,34 +3,19 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link href="http://allfont.net/allfont.css?fonts=runic" rel="stylesheet" type="text/css" /> -->
+<link rel="stylesheet" href="css/fontawesome/css/all.css" />
 <style type="text/css">
 @font-face {
   font-family: runic;
   src: url('resources/ComicRunes.otf');
 }
 
-body{ background: #000; text-align:center;user-select: none; /* supported by Chrome and Opera */
+body{ background: #000; color: mintcream; font-family: garamond; text-align:center;user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */ }
 hr{ border: dotted 1px #dedede;}
-
-table {
-	padding: 0;
-	margin: 0 auto;
-}
-table tr,td{
-	padding: 0;
-	margin: 0;
-}
-table td.skill {
-	padding: 0;
-	margin: 0;
-	border: dotted 1px #dedede;
-	width: 2cm;
-	height: 2cm;
-}
 
 .menu{
 	position: fixed;
@@ -49,7 +34,7 @@ table td.skill {
 	font-family: "runic", "Garamond";
 	font-size: 2cm;
 	text-align: center;
-	margin-bottom:16px;
+	margin-bottom:13px;
 	margin-top:0;
 	color: mintcream;
 	text-shadow: 0 0 15px hsla(0, 0%, 100%, 1), /* bloom */ 0 2px 4px hsla(0, 0%, 0%, 0.7);
@@ -58,19 +43,27 @@ table td.skill {
 .menu a{
 	display: inline-block;
 	text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     font-family: "Garamond";
     font-weight: bold;
     color: silver;
     padding: 0;
     text-shadow: 0 0 15px hsla(0, 0%, 100%, 1), /* bloom */ 0 2px 4px hsla(0, 0%, 0%, 0.7);
     margin: 5px;
-	margin-right:10px;
     cursor: pointer;
 }
 
+.menu a#mypersona{
+    font-size: 28px;
+	color: mintcream;
+}
+
+
 .menu a:hover{
 	color: #fff;
+}
+.menu a#mypersona:hover{
+	color: gold;
 }
 
 .whatismypersonality, #whatismypersonality{
@@ -117,7 +110,8 @@ table td.skill {
 	color: mintcream;
 }
 
-.spell-list, .personality, .spell-item, .about, .whatismypersonality{
+.about, .spell-list, .weapon-list, .equipment-list, .mypersona,
+.personality, .weapon-select, .equipment-select, .spell-item, .makea6die{
 	vertical-align: top;
 	text-align: center;
 	font-family: Georgia, Serif;
@@ -178,7 +172,21 @@ table td.skill {
   cursor: pointer;
 }
 
-.spell{
+.skill{
+	background: #dedede;
+}
+
+.spell-container, .weapon-container, .equipment-container{
+  width: 2.1cm;
+  height:2.1cm;
+  display: inline-block;
+  border: dotted 1px silver;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.spell, .weapon, .equipment{
 font-size: 0;
 margin: 0;
 padding:0;
@@ -192,7 +200,7 @@ cursor: pointer;
 border-radius: 5px;
 }
 
-.spell:after {
+.spell:after, .weapon:after, .equipment:after  {
   content: '';
   display: block;
   position: absolute;
@@ -212,7 +220,7 @@ border-radius: 5px;
 .dexterity{ border-color: limegreen; }
 .constitution{ border-color: saddlebrown; }
 
-.spellart{
+.spellart, .weaponart, .equipmentart{
 display: inline-block;
 width: 2cm;
 height: 2cm;
@@ -220,6 +228,11 @@ position:absolute;
 top: 0cm;
 left: 0cm;
 }
+
+.mypersona p{
+	font-size: 20px;
+}
+
 .fireball{ background: url('images/fireball.png');}
 .meteor{ background: url('images/meteor.png');}
 .chainlightning{ background: url('images/chainlightning.png');}
@@ -332,6 +345,48 @@ left: 0cm;
 .thrust{ background: url('images/thrust.png');} 
 .lethalstrike{ background: url('images/lethalstrike.png');} 
 
+.crystalstaff{ background: url('images/crystalstaff.png');}
+.arcanetome{ background: url('images/arcanetome.png');}
+.healtome{ background: url('images/healtome.png');}
+.druidstaff{ background: url('images/druidstaff.png');}
+.quarterstaff{ background: url('images/quarterstaff.png');}
+.broomstick{ background: url('images/broomstick.png');}
+.guitar{ background: url('images/guitar.png');}
+.eldritchtome{ background: url('images/eldritchtome.png');}
+.skullstaff{ background: url('images/skullstaff.png');}
+.axe{ background: url('images/axe.png');}
+.doubleaxe{ background: url('images/doubleaxe.png');}
+.mace{ background: url('images/mace.png');}
+.claymore{ background: url('images/claymore.png');}
+.longsword{ background: url('images/longsword.png');}
+.halberd{ background: url('images/halberd.png');}
+.sledgehammerweapon{ background: url('images/sledgehammerweapon.png');}
+.flail{ background: url('images/flail.png');}
+.roundshield{ background: url('images/roundshield.png');}
+.knightsword{ background: url('images/knightsword.png');}
+.shortsword{ background: url('images/shortsword.png');}
+.rapier{ background: url('images/rapier.png');}
+.flamberge{ background: url('images/flamberge.png');}
+.sabre{ background: url('images/sabre.png');}
+.ninjato{ background: url('images/ninjato.png');}
+.armyknife{ background: url('images/armyknife.png');}
+.bow{ background: url('images/bow.png');}
+.crossbow{ background: url('images/crossbow.png');}
+.rope{ background: url('images/rope.png');}
+.shuriken{ background: url('images/shuriken.png');}
+.claws{ background: url('images/claws.png');}
+.whip{ background: url('images/whip.png');}
+.sling{ background: url('images/sling.png');}
+.picklock{ background: url('images/picklock.png');}
+.bombweapon{ background: url('images/bombweapon.png');}
+
+.magehat{ background: url('images/magehat.png');}
+.druidhat{ background: url('images/druidhat.png');}
+.hood{ background: url('images/hood.png');}
+.knighthelmet{ background: url('images/knighthelmet.png');}
+.leatherhelmet{ background: url('images/leatherhelmet.png');}
+.cowl{ background: url('images/cowl.png');}
+
 @media only screen and (max-width: 500px) {
   .menu .page-title {
     font-size: 1.1cm;
@@ -357,10 +412,16 @@ left: 0cm;
 <body>
 <div class="menu">
 	<div class="page-title">Skill Personality</div>
-	<a href="#" id="about">About</a>
-	<a href="#" id="spell-list">Spells</a>
-	<a href="#" id="personality">Personality</a>
-	<a href="#" id="makea6die">Make a 6-sided Die</a>
+	
+	<a href="#" id="about" title="About the Idea"><span class="fas fa-info-circle"></span></a>
+	<a href="#" id="spell-list" title="Spell List"><span class="fas fa-fire"></span></a>
+	<a href="#" id="weapon-list" title="Weapon List"><span class="fas fa-shield-alt"></span></a>
+	<a href="#" id="equipment-list" title="Equipment List"><span class="fas fa-tshirt"></span></a>
+	<a href="#" id="mypersona" title="My Persona"><span class="far fa-user-circle"></span></a>
+	<a href="#" id="personality" title="My Spells"><span class="fas fa-hand-sparkles"></span></a>
+	<a href="#" id="weapon-select" title="My Weapons"><span class="fas fa-user-shield"></span></a>
+	<a href="#" id="equipment-select" title="My Equipment"><span class="fas fa-user-secret"></span></a>
+	<a href="#" id="makea6die" title="Make a 6-sided die"><span class="fas fa-dice-six"></span></a>
 </div>
 <div class="content">
 <div class="spell-list">
@@ -698,47 +759,171 @@ left: 0cm;
 <div class="about">
 <h3>About</h3>
 </div>
-<div class="personality">
-	<table>
-		<tr>
-			<td></td>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td class="skill" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-			<td></td>
-			<td></td>
-		</tr>
-	</table>
-	<a href="javascript:void(0);" id="whatismypersonality">What is my personality?</a>
+<div class="weapon-list">
+	<div id="crystalstaff" title="Crystal Staff" class="intelligence weapon wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="crystalstaff weaponart"></div>
+	</div>
+	<div id="arcanetome" title="Arcane Tome" class="intelligence weapon wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="arcanetome weaponart"></div>
+	</div>
+	<div id="healtome" title="Heal Tome" class="wisdom weapon druid priest bard" draggable="true" ondragstart="drag(event)">
+	  <div class="healtome weaponart"></div>
+	</div>
+	<div id="druidstaff" title="Druid Staff" class="wisdom weapon druid" draggable="true" ondragstart="drag(event)">
+	  <div class="druidstaff weaponart"></div>
+	</div>
+	<div id="quarterstaff" title="Quarter Staff" class="wisdom weapon monk fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="quarterstaff weaponart"></div>
+	</div>
+	<div id="broomstick" title="Broomstick" class="wisdom weapon witch" draggable="true" ondragstart="drag(event)">
+	  <div class="broomstick weaponart"></div>
+	</div>
+	<div id="guitar" title="Guitar" class="charisma weapon bard" draggable="true" ondragstart="drag(event)">
+	  <div class="guitar weaponart"></div>
+	</div>
+	<div id="eldritchtome" title="Eldritch Tome" class="charisma weapon sorcerer warlock witch" draggable="true" ondragstart="drag(event)">
+	  <div class="eldritchtome weaponart"></div>
+	</div>
+	<div id="skullstaff" title="Skull Staff" class="charisma weapon sorcerer warlock necromancer witch" draggable="true" ondragstart="drag(event)">
+	  <div class="skullstaff weaponart"></div>
+	</div>
+	<div id="axe" title="Axe" class="strength weapon fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="axe weaponart"></div>
+	</div>
+	<div id="doubleaxe" title="Double Axe" class="strength weapon fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="doubleaxe weaponart"></div>
+	</div>
+	<div id="mace" title="Mace" class="strength weapon fighter barbarian battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="mace weaponart"></div>
+	</div>
+	<div id="claymore" title="Claymore" class="strength weapon fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="claymore weaponart"></div>
+	</div>
+	<div id="longsword" title="Longsword" class="strength weapon fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="longsword weaponart"></div>
+	</div>
+	<div id="halberd" title="Halberd" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="halberd weaponart"></div>
+	</div>
+	<div id="sledgehammerweapon" title="Sledge Hammer" class="strength weapon fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="sledgehammerweapon weaponart"></div>
+	</div>
+	<div id="flail" title="Flail" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="flail weaponart"></div>
+	</div>
+	<div id="roundshield" title="Round Shield" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="roundshield weaponart"></div>
+	</div>
+	<div id="knightsword" title="Knight Sword" class="dexterity weapon fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
+	  <div class="knightsword weaponart"></div>
+	</div>
+	<div id="shortsword" title="Shortsword" class="dexterity weapon fighter paladin battlemage bard ranger rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="shortsword weaponart"></div>
+	</div>
+	<div id="rapier" title="Rapier" class="dexterity weapon rogue bard fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="rapier weaponart"></div>
+	</div>
+	<div id="flamberge" title="Flamberge" class="dexterity weapon fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="flamberge weaponart"></div>
+	</div>		
+	<div id="sabre" title="Sabre" class="dexterity weapon rogue fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="sabre weaponart"></div>
+	</div>	
+	<div id="ninjato" title="Ninjato" class="dexterity weapon rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="ninjato weaponart"></div>
+	</div>	
+	<div id="armyknife" title="Army Knife" class="dexterity weapon rogue bard fighter ranger" draggable="true" ondragstart="drag(event)">
+	  <div class="armyknife weaponart"></div>
+	</div>
+	<div id="bow" title="Bow" class="dexterity weapon ranger" draggable="true" ondragstart="drag(event)">
+	  <div class="bow weaponart"></div>
+	</div>	
+	<div id="crossbow" title="Crossbow" class="dexterity weapon ranger" draggable="true" ondragstart="drag(event)">
+	  <div class="crossbow weaponart"></div>
+	</div>	
+	<div id="rope" title="Rope" class="dexterity weapon ranger rogue fighter bard" draggable="true" ondragstart="drag(event)">
+	  <div class="rope weaponart"></div>
+	</div>
+	<div id="shuriken" title="Shuriken" class="dexterity weapon rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="shuriken weaponart"></div>
+	</div>
+	<div id="claws" title="Claws" class="dexterity weapon rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="claws weaponart"></div>
+	</div>
+	<div id="whip" title="Whip" class="dexterity weapon rogue bard fighter ranger" draggable="true" ondragstart="drag(event)">
+	  <div class="whip weaponart"></div>
+	</div>
+	<div id="sling" title="Sling" class="dexterity weapon rogue bard ranger" draggable="true" ondragstart="drag(event)">
+	  <div class="sling weaponart"></div>
+	</div>
+	<div id="picklock" title="Pick Lock" class="dexterity weapon rogue bard" draggable="true" ondragstart="drag(event)">
+	  <div class="picklock weaponart"></div>
+	</div>
+	<div id="bombweapon" title="Bomb" class="dexterity weapon rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="bombweapon weaponart"></div>
+	</div>
 </div>
-<div class="whatismypersonality">
+<div class="equipment-list">
+	<div id="magehat" title="Mage Hat" class="intelligence equipment wizard sorcerer bard" draggable="true" ondragstart="drag(event)">
+	  <div class="magehat equipmentart"></div>
+	</div>
+	<div id="druidhat" title="Druid Hat" class="wisdom equipment druid" draggable="true" ondragstart="drag(event)">
+	  <div class="druidhat equipmentart"></div>
+	</div>
+	<div id="cowl" title="Cowl" class="charisma equipment warlock, sorcerer, rogue, fighter, bard" draggable="true" ondragstart="drag(event)">
+	  <div class="cowl equipmentart"></div>
+	</div>
+	<div id="knighthelmet" title="Knight Helmet" class="strength equipment fighter, paladin" draggable="true" ondragstart="drag(event)">
+	  <div class="knighthelmet equipmentart"></div>
+	</div>	
+	<div id="leatherhelmet" title="Leather Helmet" class="dexterity equipment fighter, rogue" draggable="true" ondragstart="drag(event)">
+	  <div class="leatherhelmet equipmentart"></div>
+	</div>	
+	<div id="hood" title="Hood" class="dexterity equipment rogue, fighter, bard" draggable="true" ondragstart="drag(event)">
+	  <div class="hood equipmentart"></div>
+	</div>	
+</div>
+
+<div class="mypersona">
+	
+</div>
+<div class="personality">
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill spell-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="weapon-select">
+	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>	
+	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="equipment-select">
+	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br>
+	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="makea6die">
 	
 </div>
 <div class="spell-item">
