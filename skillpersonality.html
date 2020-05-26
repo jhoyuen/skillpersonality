@@ -110,8 +110,8 @@ hr{ border: dotted 1px #dedede;}
 	color: mintcream;
 }
 
-.about, .spell-list, .weapon-list, .equipment-list, .mypersona,
-.personality, .weapon-select, .equipment-select, .spell-item, .makea6die{
+.about, .spell-list, .weapon-list, .mypersona,
+.personality, .weapon-select, .spell-item, .makea6die{
 	vertical-align: top;
 	text-align: center;
 	font-family: Georgia, Serif;
@@ -176,7 +176,7 @@ hr{ border: dotted 1px #dedede;}
 	background: #dedede;
 }
 
-.spell-container, .weapon-container, .equipment-container{
+.spell-container, .weapon-container{
   width: 2.1cm;
   height:2.1cm;
   display: inline-block;
@@ -186,7 +186,7 @@ hr{ border: dotted 1px #dedede;}
   cursor: pointer;
 }
 
-.spell, .weapon, .equipment{
+.spell, .weapon{
 font-size: 0;
 margin: 0;
 padding:0;
@@ -200,7 +200,7 @@ cursor: pointer;
 border-radius: 5px;
 }
 
-.spell:after, .weapon:after, .equipment:after  {
+.spell:after, .weapon:after {
   content: '';
   display: block;
   position: absolute;
@@ -220,7 +220,7 @@ border-radius: 5px;
 .dexterity{ border-color: limegreen; }
 .constitution{ border-color: saddlebrown; }
 
-.spellart, .weaponart, .equipmentart{
+.spellart, .weaponart{
 display: inline-block;
 width: 2cm;
 height: 2cm;
@@ -370,6 +370,7 @@ left: 0cm;
 .sabre{ background: url('images/sabre.png');}
 .ninjato{ background: url('images/ninjato.png');}
 .armyknife{ background: url('images/armyknife.png');}
+.spear{ background: url('images/spear.png');}
 .bow{ background: url('images/bow.png');}
 .crossbow{ background: url('images/crossbow.png');}
 .rope{ background: url('images/rope.png');}
@@ -416,11 +417,9 @@ left: 0cm;
 	<a href="#" id="about" title="About the Idea"><span class="fas fa-info-circle"></span></a>
 	<a href="#" id="spell-list" title="Spell List"><span class="fas fa-fire"></span></a>
 	<a href="#" id="weapon-list" title="Weapon List"><span class="fas fa-shield-alt"></span></a>
-	<a href="#" id="equipment-list" title="Equipment List"><span class="fas fa-tshirt"></span></a>
 	<a href="#" id="mypersona" title="My Persona"><span class="far fa-user-circle"></span></a>
 	<a href="#" id="personality" title="My Spells"><span class="fas fa-hand-sparkles"></span></a>
 	<a href="#" id="weapon-select" title="My Weapons"><span class="fas fa-user-shield"></span></a>
-	<a href="#" id="equipment-select" title="My Equipment"><span class="fas fa-user-secret"></span></a>
 	<a href="#" id="makea6die" title="Make a 6-sided die"><span class="fas fa-dice-six"></span></a>
 </div>
 <div class="content">
@@ -835,6 +834,9 @@ left: 0cm;
 	<div id="armyknife" title="Army Knife" class="dexterity weapon rogue bard fighter ranger" draggable="true" ondragstart="drag(event)">
 	  <div class="armyknife weaponart"></div>
 	</div>
+	<div id="spear" title="Spear" class="dexterity weapon fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="spear weaponart"></div>
+	</div>
 	<div id="bow" title="Bow" class="dexterity weapon ranger" draggable="true" ondragstart="drag(event)">
 	  <div class="bow weaponart"></div>
 	</div>	
@@ -862,26 +864,6 @@ left: 0cm;
 	<div id="bombweapon" title="Bomb" class="dexterity weapon rogue" draggable="true" ondragstart="drag(event)">
 	  <div class="bombweapon weaponart"></div>
 	</div>
-</div>
-<div class="equipment-list">
-	<div id="magehat" title="Mage Hat" class="intelligence equipment wizard sorcerer bard" draggable="true" ondragstart="drag(event)">
-	  <div class="magehat equipmentart"></div>
-	</div>
-	<div id="druidhat" title="Druid Hat" class="wisdom equipment druid" draggable="true" ondragstart="drag(event)">
-	  <div class="druidhat equipmentart"></div>
-	</div>
-	<div id="cowl" title="Cowl" class="charisma equipment warlock, sorcerer, rogue, fighter, bard" draggable="true" ondragstart="drag(event)">
-	  <div class="cowl equipmentart"></div>
-	</div>
-	<div id="knighthelmet" title="Knight Helmet" class="strength equipment fighter, paladin" draggable="true" ondragstart="drag(event)">
-	  <div class="knighthelmet equipmentart"></div>
-	</div>	
-	<div id="leatherhelmet" title="Leather Helmet" class="dexterity equipment fighter, rogue" draggable="true" ondragstart="drag(event)">
-	  <div class="leatherhelmet equipmentart"></div>
-	</div>	
-	<div id="hood" title="Hood" class="dexterity equipment rogue, fighter, bard" draggable="true" ondragstart="drag(event)">
-	  <div class="hood equipmentart"></div>
-	</div>	
 </div>
 
 <div class="mypersona">
@@ -912,16 +894,6 @@ left: 0cm;
 	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>	
 	<div class="skill weapon-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-</div>
-<div class="equipment-select">
-	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-	<br>
-	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-	<br>
-	<div class="skill equipment-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 <div class="makea6die">
 	
