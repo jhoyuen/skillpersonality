@@ -356,15 +356,21 @@ left: 0cm;
 .lethalstrike{ background: url('images/lethalstrike.png');} 
 
 .crystalstaff{ background: url('images/crystalstaff.png');}
+.archmagestaff{ background: url('images/archmagestaff.png');}
 .arcanetome{ background: url('images/arcanetome.png');}
+.spacetimerelic{ background: url('images/spacetimerelic.png');}
 .healtome{ background: url('images/healtome.png');}
 .cross{ background: url('images/cross.png');}
+.amulet{ background: url('images/amulet.png');}
 .artofwar{ background: url('images/artofwar.png');}
 .druidstaff{ background: url('images/druidstaff.png');}
 .quarterstaff{ background: url('images/quarterstaff.png');}
 .runicmakeshiftstaff{ background: url('images/runicmakeshiftstaff.png');}
+.scepterofra{ background: url('images/scepterofra.png');}
 .broomstick{ background: url('images/broomstick.png');}
 .guitar{ background: url('images/guitar.png');}
+.leadershipbanner{ background: url('images/leadershipbanner.png');}
+.emblem{ background: url('images/emblem.png');}
 .eldritchtome{ background: url('images/eldritchtome.png');}
 .skullstaff{ background: url('images/skullstaff.png');}
 .axe{ background: url('images/axe.png');}
@@ -373,11 +379,11 @@ left: 0cm;
 .gemmedmace{ background: url('images/gemmedmace.png');}
 .claymore{ background: url('images/claymore.png');}
 .longsword{ background: url('images/longsword.png');}
+.cursedblade{ background: url('images/cursedblade.png');}
 .halberd{ background: url('images/halberd.png');}
 .sledgehammerweapon{ background: url('images/sledgehammerweapon.png');}
 .hatchett{ background: url('images/hatchett.png');}
 .flail{ background: url('images/flail.png');}
-.cursedblade{ background: url('images/cursedblade.png');}
 .roundshield{ background: url('images/roundshield.png');}
 .knightsword{ background: url('images/knightsword.png');}
 .shortsword{ background: url('images/shortsword.png');}
@@ -811,14 +817,23 @@ left: 0cm;
 	<div id="crystalstaff" title="Crystal Staff" class="intelligence weapon wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="crystalstaff weaponart"></div>
 	</div>
+	<div id="archmagestaff" title="Archmage Staff" class="intelligence weapon wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="archmagestaff weaponart"></div>
+	</div>
 	<div id="arcanetome" title="Arcane Tome" class="intelligence weapon wizard sorcerer" draggable="true" ondragstart="drag(event)">
 	  <div class="arcanetome weaponart"></div>
+	</div>
+	<div id="spacetimerelic" title="Space Time Relic" class="intelligence weapon wizard sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="spacetimerelic weaponart"></div>
 	</div>
 	<div id="healtome" title="Heal Tome" class="wisdom weapon druid priest bard" draggable="true" ondragstart="drag(event)">
 	  <div class="healtome weaponart"></div>
 	</div>
 	<div id="cross" title="Cross" class="wisdom weapon priest" draggable="true" ondragstart="drag(event)">
 	  <div class="cross weaponart"></div>
+	</div>
+	<div id="amulet" title="Amulet" class="wisdom weapon priest" draggable="true" ondragstart="drag(event)">
+	  <div class="amulet weaponart"></div>
 	</div>
 	<div id="artofwar" title="Art of War" class="wisdom weapon fighter bard paladin battlemage ranger monk" draggable="true" ondragstart="drag(event)">
 	  <div class="artofwar weaponart"></div>
@@ -832,11 +847,20 @@ left: 0cm;
 	<div id="runicmakeshiftstaff" title="Runic Makeshift Staff - a magically-infused runestone attached to a long makeshift stick" class="wisdom weapon druid priest bard" draggable="true" ondragstart="drag(event)">
 	  <div class="runicmakeshiftstaff weaponart"></div>
 	</div>
+	<div id="scepterofra" title="Scepter of Ra - a scepter that channels its magic from the divine power of the Egyptian sun god Ra" class="wisdom weapon priest wizard" draggable="true" ondragstart="drag(event)">
+	  <div class="scepterofra weaponart"></div>
+	</div>
 	<div id="broomstick" title="Broomstick" class="wisdom weapon witch" draggable="true" ondragstart="drag(event)">
 	  <div class="broomstick weaponart"></div>
 	</div>
 	<div id="guitar" title="Guitar" class="charisma weapon bard" draggable="true" ondragstart="drag(event)">
 	  <div class="guitar weaponart"></div>
+	</div>
+	<div id="leadershipbanner" title="Leadership Banner" class="charisma weapon fighter ranger paladin bard" draggable="true" ondragstart="drag(event)">
+	  <div class="leadershipbanner weaponart"></div>
+	</div>
+	<div id="emblem" title="Emblem" class="charisma weapon fighter paladin" draggable="true" ondragstart="drag(event)">
+	  <div class="emblem weaponart"></div>
 	</div>
 	<div id="eldritchtome" title="Eldritch Tome" class="charisma weapon sorcerer warlock witch" draggable="true" ondragstart="drag(event)">
 	  <div class="eldritchtome weaponart"></div>
@@ -862,6 +886,9 @@ left: 0cm;
 	<div id="longsword" title="Longsword" class="strength weapon fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="longsword weaponart"></div>
 	</div>
+	<div id="cursedblade" title="Cursed Blade - used far too much in battle and hungers for more" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
+	  <div class="cursedblade weaponart"></div>
+	</div>
 	<div id="halberd" title="Halberd" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
 	  <div class="halberd weaponart"></div>
 	</div>
@@ -873,10 +900,7 @@ left: 0cm;
 	</div>
 	<div id="flail" title="Flail" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
 	  <div class="flail weaponart"></div>
-	</div>
-	<div id="cursedblade" title="Cursed Blade - used far too much in battle and hungers for more" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
-	  <div class="cursedblade weaponart"></div>
-	</div>
+	</div>	
 	<div id="roundshield" title="Round Shield" class="strength weapon fighter" draggable="true" ondragstart="drag(event)">
 	  <div class="roundshield weaponart"></div>
 	</div>
