@@ -7,6 +7,7 @@ var spells = {
 	lightningstrike: { title: "Lightning Strike", description: "A single discharge of electricity", reallife: "\"Tackle a single problem\"" },
 	firebolt: { title: "Firebolt", description: "A sudden flash of fire", reallife: "\"A quick burst for a fix. Quick, heated but effective\"" },
 	thunderbolt: { title: "Thunderbolt", description: "A sudden flash of thunder", reallife: "\"A quick burst for a fix. Quick, loud but effective\"" },
+	waterbolt: { title: "Waterbolt", description: "A sudden splash of water", reallife: "\"A quick burst for a fix. Quick, heavy but effective\"" },
 	earthsmash: { title: "Earth Smash", description: "A giant rock smashes the earth", reallife: "\"a fix that packs a punch and is here to stay...\"" },
 	thunderwave: { title: "Thunderwave", description: "A blaze of thunder booming in a line", reallife: "\"Loudly fix all problems that lie in front of you\"" },
 	firewave: { title: "Firewave", description: "A wave of fire burning in a line", reallife: "\"Passionately fix all problems that lie in front of you\"" },
@@ -167,7 +168,7 @@ function init(){
 		console.log($('.mypersona p').length);
 		if($('.mypersona p').length == 0)
 		{
-			$('.mypersona').html('<p>Hero! Your adventure has not yet begun. Choose your weapons, equipment and spells and venture on!</p>')
+			$('.mypersona').html('<p>Hero! Your adventure has not yet begun. Choose your weapons and spells and venture on!</p>')
 		}
 		else{
 			$('.mypersona p').sort(sort_p).appendTo('.mypersona');
