@@ -269,6 +269,7 @@ left: 0cm;
 .holysword{ background: url('images/holysword.png');}
 .holyaura{ background: url('images/holyaura.png');}
 .holylight{ background: url('images/holylight.png');}
+.healingtouch{ background: url('images/healingtouch.png');}
 .mount{ background: url('images/mount.png');}
 .summonpet{ background: url('images/summonpet.png');} 
 .summonbug{ background: url('images/summonbug.png');} 
@@ -298,6 +299,7 @@ left: 0cm;
 .heartandsoul{ background: url('images/heartandsoul.png');}
 .metamagic{ background: url('images/metamagic.png');}
 .mindcontrol{ background: url('images/mindcontrol.png');}
+.summondragon{ background: url('images/summondragon.png');} 
 .summondemon{ background: url('images/summondemon.png');} 
 .hex{ background: url('images/hex.png');} 
 .crystalball{ background: url('images/crystalball.png');} 
@@ -309,7 +311,8 @@ left: 0cm;
 .raiseskeleton{ background: url('images/raiseskeleton.png');} 
 .syphonlife{ background: url('images/syphonlife.png');} 
 .syphonmagic{ background: url('images/syphonmagic.png');} 
-.vampirebats{ background: url('images/vampirebats.png');} 
+.vampirebats{ background: url('images/vampirebats.png');}
+.pressurepunch{ background: url('images/pressurepunch.png');} 
 .uppercut{ background: url('images/uppercut.png');}  
 .cleave{ background: url('images/cleave.png');} 
 .smash{ background: url('images/smash.png');} 
@@ -352,6 +355,7 @@ left: 0cm;
 .backstab{ background: url('images/backstab.png');} 
 .haste{ background: url('images/haste.png');} 
 .combo{ background: url('images/combo.png');} 
+.dragonstyle{ background: url('images/dragonstyle.png');} 
 .spinningsword{ background: url('images/spinningsword.png');}
 .flyingsword{ background: url('images/flyingsword.png');}
 .poison{ background: url('images/poison.png');}  
@@ -554,6 +558,9 @@ left: 0cm;
 	<div id="holylight" title="Holy Light" class="wisdom spell paladin priest" draggable="true" ondragstart="drag(event)">
 	  <div class="holylight spellart"></div>
 	</div>
+	<div id="healingtouch" title="Healing Touch" class="wisdom spell druid priest monk" draggable="true" ondragstart="drag(event)">
+	  <div class="healingtouch spellart"></div>
+	</div>
 	<div id="mount" title="Mount" class="wisdom spell paladin" draggable="true" ondragstart="drag(event)">
 	  <div class="mount spellart"></div>
 	</div>
@@ -641,6 +648,9 @@ left: 0cm;
 	<div id="mindcontrol" title="Mind Control" class="charisma spell sorcerer warlock necromancer bard" draggable="true" ondragstart="drag(event)">
 	  <div class="mindcontrol spellart"></div>
 	</div>
+	<div id="summondragon" title="Summon Dragon" class="charisma spell warlock sorcerer" draggable="true" ondragstart="drag(event)">
+	  <div class="summondragon spellart"></div>
+	</div>
 	<div id="summondemon" title="Summon Demon" class="charisma spell warlock necromancer" draggable="true" ondragstart="drag(event)">
 	  <div class="summondemon spellart"></div>
 	</div>
@@ -677,15 +687,18 @@ left: 0cm;
 	<div id="vampirebats" title="Vampire Bats" class="charisma spell warlock sorcerer witch" draggable="true" ondragstart="drag(event)">
 	  <div class="vampirebats spellart"></div>
 	</div>
+	<div id="pressurepunch" title="Pressure Punch" class="strength spell fighter barbarian monk" draggable="true" ondragstart="drag(event)">
+	  <div class="pressurepunch spellart"></div>
+	</div>
 	<div id="uppercut" title="Uppercut" class="strength spell fighter barbarian monk bard" draggable="true" ondragstart="drag(event)">
 	  <div class="uppercut spellart"></div>
-	</div>
-	<div id="cleave" title="Cleave" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
-	  <div class="cleave spellart"></div>
 	</div>
 	<div id="smash" title="Smash" class="strength spell barbarian fighter" draggable="true" ondragstart="drag(event)">
 	  <div class="smash spellart"></div>
 	</div>
+	<div id="cleave" title="Cleave" class="strength spell fighter barbarian" draggable="true" ondragstart="drag(event)">
+	  <div class="cleave spellart"></div>
+	</div>	
 	<div id="swordslam" title="Sword Slam" class="strength spell barbarian fighter paladin battlemage" draggable="true" ondragstart="drag(event)">
 	  <div class="swordslam spellart"></div>
 	</div>
@@ -799,6 +812,9 @@ left: 0cm;
 	</div>
 	<div id="combo" title="Combo" class="dexterity spell bard fighter rogue ranger monk" draggable="true" ondragstart="drag(event)">
 	  <div class="combo spellart"></div>
+	</div>
+	<div id="dragonstyle" title="Dragon Style" class="dexterity spell monk" draggable="true" ondragstart="drag(event)">
+	  <div class="dragonstyle spellart"></div>
 	</div>
 	<div id="spinningsword" title="Spinning Sword" class="dexterity spell bard ranger rogue" draggable="true" ondragstart="drag(event)">
 	  <div class="spinningsword spellart"></div>
